@@ -9,7 +9,6 @@
 #import "ApiManager.h"
 #import "Mantle.h"
 
-//static NSString *const kUserEmailLoginPath = @"/Prod/auth/email";
 static NSString *const kUserEmailLoginPath = @"/auth/email";
 
 @implementation APIManager

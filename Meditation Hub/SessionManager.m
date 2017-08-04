@@ -12,7 +12,7 @@
 @implementation SessionManager
 
 - (id)init {
-    self = [super initWithBaseURL:[NSURL URLWithString:STR_API_BASE_URL]];
+    self = [super initWithBaseURL:[NSURL URLWithString:API_BASE_URL]];
     if(!self) return nil;
     
     self.responseSerializer = [AFJSONResponseSerializer serializer];

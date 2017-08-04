@@ -9,6 +9,6 @@
 #ifndef Global_h
 #define Global_h
 
-//#define STR_API_BASE_URL @"https://bm3txkxhfl.execute-api.us-east-1.amazonaws.com"
-#define STR_API_BASE_URL @"http://192.168.86.29:3000"
+#define API_BASE_URL @"https://api.meditationhubapp.com"
+//#define API_BASE_URL @"http://192.168.86.29:3000"
 #endif /* Global_h */
