@@ -10,6 +10,7 @@
 #import "Mantle.h"
 
 static NSString *const kUserEmailLoginPath = @"/auth/email";
+static NSString *const kFacebookLoginPath = @"/auth/facebook";
 
 @implementation APIManager
 
@@ -35,6 +36,31 @@ static NSString *const kUserEmailLoginPath = @"/auth/email";
                  failure(error);
                  
              }];
+}
+
+
+- (NSURLSessionDataTask *)postFacebookLoginWithRequestModel:(FacebookLoginRequestModel *)requestModel
+                                                 success:(void (^)(FacebookLoginResponseModel *responseModel))success
+                                                 failure:(void (^)(NSError *error))failure{
+    
+    NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
+    NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
+    //[self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"X-Auth-Token"];
+    
+    return [self POST:kFacebookLoginPath parameters:parametersWithKey progress:nil
+              success:^(NSURLSessionDataTask *task, id responseObject) {
+                  
+                  NSDictionary *responseDictionary = (NSDictionary *)responseObject;
+                  
+                  NSError *error;
+                  FacebookLoginResponseModel *loginResponse = [MTLJSONAdapter modelOfClass:FacebookLoginResponseModel.class
+                                                                         fromJSONDictionary:responseDictionary error:&error];
+                  success(loginResponse);
+                  
+              } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                  failure(error);
+                  
+              }];
 }
 
 

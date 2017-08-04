@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface LoginViewController : UIViewController
-- (IBAction)termsTapped:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *processingActivityView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activitySpinner;
+@property (weak, nonatomic) IBOutlet UILabel *waitingMessage;
+
+
+- (IBAction)facebookLoginButtonTapped:(id)sender;
+
 
 @end
