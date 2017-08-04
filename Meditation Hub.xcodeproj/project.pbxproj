@@ -14,6 +14,7 @@
 		AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1541F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m */; };
 		AB2FB1581F341BA600AFCEAC /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1571F341BA600AFCEAC /* ApiManager.m */; };
 		AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */; };
+		AB2FB15E1F344E8400AFCEAC /* EmailSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB15D1F344E8400AFCEAC /* EmailSignupViewController.m */; };
 		AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8322BD1F33DAE90018EF14 /* LoginViewController.m */; };
 		ABA403D11EFE17F400B1B0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D01EFE17F400B1B0F0 /* main.m */; };
 		ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D31EFE17F400B1B0F0 /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 		AB2FB1571F341BA600AFCEAC /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		AB2FB1591F34203600AFCEAC /* EmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailLoginViewController.h; path = viewcontrollers/EmailLoginViewController.h; sourceTree = "<group>"; };
 		AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailLoginViewController.m; path = viewcontrollers/EmailLoginViewController.m; sourceTree = "<group>"; };
+		AB2FB15C1F344E8400AFCEAC /* EmailSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailSignupViewController.h; path = viewcontrollers/EmailSignupViewController.h; sourceTree = "<group>"; };
+		AB2FB15D1F344E8400AFCEAC /* EmailSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailSignupViewController.m; path = viewcontrollers/EmailSignupViewController.m; sourceTree = "<group>"; };
 		AB8322BC1F33DAE90018EF14 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		AB8322BD1F33DAE90018EF14 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		ABA403CC1EFE17F400B1B0F0 /* Meditation Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meditation Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,7 @@
 		AB2FB1461F33EAB900AFCEAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AB2FB15F1F34527100AFCEAC /* Realm */,
 				AB2FB1471F33EAC300AFCEAC /* Mantle */,
 			);
 			name = Models;
@@ -114,6 +118,13 @@
 			name = Response;
 			sourceTree = "<group>";
 		};
+		AB2FB15F1F34527100AFCEAC /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
 		AB8322BF1F33DAF00018EF14 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +132,8 @@
 				AB8322BD1F33DAE90018EF14 /* LoginViewController.m */,
 				AB2FB1591F34203600AFCEAC /* EmailLoginViewController.h */,
 				AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */,
+				AB2FB15C1F344E8400AFCEAC /* EmailSignupViewController.h */,
+				AB2FB15D1F344E8400AFCEAC /* EmailSignupViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,
 				AB2FB14A1F33EB0600AFCEAC /* UserEmailLoginRequestModel.m in Sources */,
 				ABA403D71EFE17F400B1B0F0 /* FirstViewController.m in Sources */,
+				AB2FB15E1F344E8400AFCEAC /* EmailSignupViewController.m in Sources */,
 				ABA403D11EFE17F400B1B0F0 /* main.m in Sources */,
 				AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */,
 				AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */,

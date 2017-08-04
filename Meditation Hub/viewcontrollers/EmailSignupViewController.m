@@ -1,18 +1,18 @@
 //
-//  LoginViewController.m
+//  EmailSignupViewController.m
 //  Meditation Hub
 //
 //  Created by Tim Flack on 8/3/17.
 //  Copyright © 2017 Homma. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "EmailSignupViewController.h"
 
-@interface LoginViewController ()
+@interface EmailSignupViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation EmailSignupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +34,4 @@
 }
 */
 
-- (IBAction)termsTapped:(id)sender {
-}
 @end

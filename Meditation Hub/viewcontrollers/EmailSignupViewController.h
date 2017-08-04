@@ -1,5 +1,5 @@
 //
-//  LoginViewController.h
+//  EmailSignupViewController.h
 //  Meditation Hub
 //
 //  Created by Tim Flack on 8/3/17.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
-- (IBAction)termsTapped:(id)sender;
+@interface EmailSignupViewController : UIViewController
 
 @end
