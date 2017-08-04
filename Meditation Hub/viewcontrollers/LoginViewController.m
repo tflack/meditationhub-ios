@@ -68,23 +68,31 @@
     [self showWaitOverlay:@"Please Wait..." withCompletionBlock:^(BOOL finished) {
         NSString *token = [[FBSDKAccessToken currentAccessToken] tokenString];
         
-        
-        
-        //Send the token to our server to create the account or auth the user
-        FacebookLoginRequestModel *requestModel = [FacebookLoginRequestModel new];
-        requestModel.facebookToken = token;
-        
-        [[APIManager sharedManager] postFacebookLoginWithRequestModel:requestModel success:^(FacebookLoginResponseModel *responseModel){
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                @autoreleasepool {
-                    NSLog(@"Login Response: %@", responseModel);
-                    
-                }
-            });
-            [self signinFinished];
-        } failure:^(NSError *error) {
-            NSLog(@"FAILURE CALLING FACEBOOK LOGIN API");
-        }];
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"email,name,first_name,last_name"}]
+         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+             if (!error) {
+                 NSLog(@"fetched user:%@  and Email : %@", result,result[@"email"]);
+             }
+             
+             //Send the token to our server to create the account or auth the user
+             FacebookLoginRequestModel *requestModel = [FacebookLoginRequestModel new];
+             requestModel.facebookToken = token;
+             requestModel.firstName = result[@"first_name"];
+             requestModel.lastName = result[@"last_name"];
+             requestModel.email = result[@"email"];
+             
+             [[APIManager sharedManager] postFacebookLoginWithRequestModel:requestModel success:^(FacebookLoginResponseModel *responseModel){
+                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                     @autoreleasepool {
+                         NSLog(@"Login Response: %@", responseModel);
+                         
+                     }
+                 });
+                 [self signinFinished];
+             } failure:^(NSError *error) {
+                 NSLog(@"FAILURE CALLING FACEBOOK LOGIN API");
+             }];
+         }];
     }];
 }
 

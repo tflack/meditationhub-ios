@@ -13,7 +13,10 @@
 #pragma mark - Mantle JSONKeyPathsByPropertyKey
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"facebookToken": @"facebook_token"
+             @"facebookToken": @"facebook_token",
+             @"firstName": @"first_name",
+             @"lastName": @"last_name",
+             @"email": @"email",
              };
 }
 @end

@@ -27,6 +27,19 @@
 		ABA403E21EFE17F400B1B0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA403E01EFE17F400B1B0F0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AB2FB18E1F3513E200AFCEAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5A9071A351537163EE76C5BC /* Pods-Meditation Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation Hub/Pods-Meditation Hub.release.xcconfig"; sourceTree = "<group>"; };
 		9D6F35EEC9C8567858A380D5 /* Pods-Meditation Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation Hub/Pods-Meditation Hub.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +63,8 @@
 		AB2FB1611F346A2A00AFCEAC /* FacebookLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLoginResponseModel.m; path = models/mantle/response/FacebookLoginResponseModel.m; sourceTree = "<group>"; };
 		AB2FB1631F346ADB00AFCEAC /* FacebookLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookLoginRequestModel.h; path = models/mantle/request/FacebookLoginRequestModel.h; sourceTree = "<group>"; };
 		AB2FB1641F346ADB00AFCEAC /* FacebookLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLoginRequestModel.m; path = models/mantle/request/FacebookLoginRequestModel.m; sourceTree = "<group>"; };
+		AB2FB1861F35139100AFCEAC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AB2FB1881F35139C00AFCEAC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		AB8322BC1F33DAE90018EF14 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		AB8322BD1F33DAE90018EF14 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		ABA403CC1EFE17F400B1B0F0 /* Meditation Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meditation Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +96,8 @@
 		6EEE6A916D975EA6BF30EDAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB2FB1881F35139C00AFCEAC /* libsqlite3.tbd */,
+				AB2FB1861F35139100AFCEAC /* libz.tbd */,
 				A75489D1722707E477411D1E /* libPods-Meditation Hub.a */,
 			);
 			name = Frameworks;
@@ -221,6 +238,7 @@
 				ABA403CA1EFE17F300B1B0F0 /* Resources */,
 				D949360544ECC4716C3B3A17 /* [CP] Embed Pods Frameworks */,
 				619F455446ECC4357AFC2551 /* [CP] Copy Pods Resources */,
+				AB2FB18E1F3513E200AFCEAC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -472,6 +490,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Facebook",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Facebook",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/AmazonAws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/AmazonAws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/AmazonAws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
 				);
 				INFOPLIST_FILE = "Meditation Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -490,6 +519,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Facebook",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Facebook",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/AmazonAws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/AmazonAws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/AmazonAws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
+					"$(PROJECT_DIR)/Meditation\\ Hub/Sdk/Aws",
 				);
 				INFOPLIST_FILE = "Meditation Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

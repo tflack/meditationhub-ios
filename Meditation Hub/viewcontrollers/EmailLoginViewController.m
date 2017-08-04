@@ -67,6 +67,11 @@
             }
         });
         
+        UIStoryboard *storyboard = self.storyboard;
+        UIViewController *contentViewController;
+        contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
+        [[UIApplication sharedApplication].keyWindow setRootViewController:contentViewController];
+        
     } failure:^(NSError *error) {
         NSLog(@"FAILURE CALLING LOGIN API");
     }];
