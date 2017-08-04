@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "UserModel.h"
+#import "UserRealm.h"
 #import "FacebookLoginRequestModel.h"
 #import "ApiManager.h"
 
@@ -85,10 +86,28 @@
                  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                      @autoreleasepool {
                          NSLog(@"Login Response: %@", responseModel);
+                         //Remove the user
+                         UserRealm *oldUserRealm = [[UserRealm allObjects] firstObject];
                          
+                         RLMRealm *realm = [RLMRealm defaultRealm];
+                         if([[UserRealm allObjects] count] > 0){
+                             [realm beginWriteTransaction];
+                             [realm deleteObject:oldUserRealm];
+                             [realm commitWriteTransaction];
+                         }
+                         
+                         UserRealm *newUser = [[UserRealm alloc] initWithMantleModel:responseModel.user];
+                         newUser.sessionToken = responseModel.token;
+                         
+                         [realm transactionWithBlock:^{
+                            [realm addObject:newUser];
+                         }];
+
+                         dispatch_async(dispatch_get_main_queue(), ^{
+                             [self signinFinished];
+                         });
                      }
                  });
-                 [self signinFinished];
              } failure:^(NSError *error) {
                  NSLog(@"FAILURE CALLING FACEBOOK LOGIN API");
              }];

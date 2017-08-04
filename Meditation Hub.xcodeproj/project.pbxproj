@@ -17,6 +17,8 @@
 		AB2FB15E1F344E8400AFCEAC /* EmailSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB15D1F344E8400AFCEAC /* EmailSignupViewController.m */; };
 		AB2FB1621F346A2A00AFCEAC /* FacebookLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1611F346A2A00AFCEAC /* FacebookLoginResponseModel.m */; };
 		AB2FB1651F346ADB00AFCEAC /* FacebookLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1641F346ADB00AFCEAC /* FacebookLoginRequestModel.m */; };
+		AB2FB1911F35236900AFCEAC /* UserRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1901F35236900AFCEAC /* UserRealm.m */; };
+		AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1931F352CDD00AFCEAC /* WelcomeViewController.m */; };
 		AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8322BD1F33DAE90018EF14 /* LoginViewController.m */; };
 		ABA403D11EFE17F400B1B0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D01EFE17F400B1B0F0 /* main.m */; };
 		ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D31EFE17F400B1B0F0 /* AppDelegate.m */; };
@@ -65,6 +67,10 @@
 		AB2FB1641F346ADB00AFCEAC /* FacebookLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLoginRequestModel.m; path = models/mantle/request/FacebookLoginRequestModel.m; sourceTree = "<group>"; };
 		AB2FB1861F35139100AFCEAC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AB2FB1881F35139C00AFCEAC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AB2FB18F1F35236900AFCEAC /* UserRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserRealm.h; path = models/realm/UserRealm.h; sourceTree = "<group>"; };
+		AB2FB1901F35236900AFCEAC /* UserRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRealm.m; path = models/realm/UserRealm.m; sourceTree = "<group>"; };
+		AB2FB1921F352CDD00AFCEAC /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = viewcontrollers/WelcomeViewController.h; sourceTree = "<group>"; };
+		AB2FB1931F352CDD00AFCEAC /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = viewcontrollers/WelcomeViewController.m; sourceTree = "<group>"; };
 		AB8322BC1F33DAE90018EF14 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		AB8322BD1F33DAE90018EF14 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		ABA403CC1EFE17F400B1B0F0 /* Meditation Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meditation Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +154,8 @@
 		AB2FB15F1F34527100AFCEAC /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				AB2FB18F1F35236900AFCEAC /* UserRealm.h */,
+				AB2FB1901F35236900AFCEAC /* UserRealm.m */,
 			);
 			name = Realm;
 			sourceTree = "<group>";
@@ -161,6 +169,8 @@
 				AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */,
 				AB2FB15C1F344E8400AFCEAC /* EmailSignupViewController.h */,
 				AB2FB15D1F344E8400AFCEAC /* EmailSignupViewController.m */,
+				AB2FB1921F352CDD00AFCEAC /* WelcomeViewController.h */,
+				AB2FB1931F352CDD00AFCEAC /* WelcomeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -362,7 +372,9 @@
 				ABA403D11EFE17F400B1B0F0 /* main.m in Sources */,
 				AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */,
 				AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */,
+				AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */,
 				AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */,
+				AB2FB1911F35236900AFCEAC /* UserRealm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
