@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A8DA5B6589492BE1937C0F /* libPods-Meditation Hub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A75489D1722707E477411D1E /* libPods-Meditation Hub.a */; };
+		AB2FB14A1F33EB0600AFCEAC /* UserEmailLoginRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1491F33EB0600AFCEAC /* UserEmailLoginRequestModel.m */; };
+		AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB14C1F33EF3100AFCEAC /* SessionManager.m */; };
+		AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1511F33F1D500AFCEAC /* UserModel.m */; };
+		AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1541F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m */; };
+		AB2FB1581F341BA600AFCEAC /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1571F341BA600AFCEAC /* ApiManager.m */; };
+		AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */; };
+		AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8322BD1F33DAE90018EF14 /* LoginViewController.m */; };
 		ABA403D11EFE17F400B1B0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D01EFE17F400B1B0F0 /* main.m */; };
 		ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D31EFE17F400B1B0F0 /* AppDelegate.m */; };
 		ABA403D71EFE17F400B1B0F0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D61EFE17F400B1B0F0 /* FirstViewController.m */; };
@@ -17,6 +25,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A9071A351537163EE76C5BC /* Pods-Meditation Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation Hub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation Hub/Pods-Meditation Hub.release.xcconfig"; sourceTree = "<group>"; };
+		9D6F35EEC9C8567858A380D5 /* Pods-Meditation Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meditation Hub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meditation Hub/Pods-Meditation Hub.debug.xcconfig"; sourceTree = "<group>"; };
+		A75489D1722707E477411D1E /* libPods-Meditation Hub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Meditation Hub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2FB1451F33E84900AFCEAC /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Global.h; path = supportingfiles/Global.h; sourceTree = "<group>"; };
+		AB2FB1481F33EB0600AFCEAC /* UserEmailLoginRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserEmailLoginRequestModel.h; path = models/mantle/UserEmailLoginRequestModel.h; sourceTree = "<group>"; };
+		AB2FB1491F33EB0600AFCEAC /* UserEmailLoginRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserEmailLoginRequestModel.m; path = models/mantle/UserEmailLoginRequestModel.m; sourceTree = "<group>"; };
+		AB2FB14B1F33EF3100AFCEAC /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		AB2FB14C1F33EF3100AFCEAC /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		AB2FB1501F33F1D500AFCEAC /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserModel.h; path = models/mantle/UserModel.h; sourceTree = "<group>"; };
+		AB2FB1511F33F1D500AFCEAC /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserModel.m; path = models/mantle/UserModel.m; sourceTree = "<group>"; };
+		AB2FB1531F33F8DA00AFCEAC /* UserEmailLoginResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserEmailLoginResponseModel.h; path = models/mantle/response/UserEmailLoginResponseModel.h; sourceTree = "<group>"; };
+		AB2FB1541F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserEmailLoginResponseModel.m; path = models/mantle/response/UserEmailLoginResponseModel.m; sourceTree = "<group>"; };
+		AB2FB1561F341BA600AFCEAC /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		AB2FB1571F341BA600AFCEAC /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		AB2FB1591F34203600AFCEAC /* EmailLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailLoginViewController.h; path = viewcontrollers/EmailLoginViewController.h; sourceTree = "<group>"; };
+		AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailLoginViewController.m; path = viewcontrollers/EmailLoginViewController.m; sourceTree = "<group>"; };
+		AB8322BC1F33DAE90018EF14 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
+		AB8322BD1F33DAE90018EF14 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		ABA403CC1EFE17F400B1B0F0 /* Meditation Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meditation Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA403D01EFE17F400B1B0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABA403D21EFE17F400B1B0F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,17 +62,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A8DA5B6589492BE1937C0F /* libPods-Meditation Hub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EEE6A916D975EA6BF30EDAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A75489D1722707E477411D1E /* libPods-Meditation Hub.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB2FB1461F33EAB900AFCEAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB2FB1471F33EAC300AFCEAC /* Mantle */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AB2FB1471F33EAC300AFCEAC /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				AB2FB14F1F33EFE500AFCEAC /* Response */,
+				AB2FB14E1F33EFD100AFCEAC /* Requests */,
+				AB2FB1501F33F1D500AFCEAC /* UserModel.h */,
+				AB2FB1511F33F1D500AFCEAC /* UserModel.m */,
+			);
+			name = Mantle;
+			sourceTree = "<group>";
+		};
+		AB2FB14E1F33EFD100AFCEAC /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				AB2FB1481F33EB0600AFCEAC /* UserEmailLoginRequestModel.h */,
+				AB2FB1491F33EB0600AFCEAC /* UserEmailLoginRequestModel.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		AB2FB14F1F33EFE500AFCEAC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AB2FB1531F33F8DA00AFCEAC /* UserEmailLoginResponseModel.h */,
+				AB2FB1541F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
+		AB8322BF1F33DAF00018EF14 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB8322BC1F33DAE90018EF14 /* LoginViewController.h */,
+				AB8322BD1F33DAE90018EF14 /* LoginViewController.m */,
+				AB2FB1591F34203600AFCEAC /* EmailLoginViewController.h */,
+				AB2FB15A1F34203600AFCEAC /* EmailLoginViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		ABA403C31EFE17F300B1B0F0 = {
 			isa = PBXGroup;
 			children = (
 				ABA403CE1EFE17F400B1B0F0 /* Meditation Hub */,
 				ABA403CD1EFE17F400B1B0F0 /* Products */,
+				CDF8BF3B7F2D253EF687E5CE /* Pods */,
+				6EEE6A916D975EA6BF30EDAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +146,8 @@
 		ABA403CE1EFE17F400B1B0F0 /* Meditation Hub */ = {
 			isa = PBXGroup;
 			children = (
+				AB2FB1461F33EAB900AFCEAC /* Models */,
+				AB8322BF1F33DAF00018EF14 /* ViewControllers */,
 				ABA403D21EFE17F400B1B0F0 /* AppDelegate.h */,
 				ABA403D31EFE17F400B1B0F0 /* AppDelegate.m */,
 				ABA403D51EFE17F400B1B0F0 /* FirstViewController.h */,
@@ -72,6 +159,10 @@
 				ABA403E01EFE17F400B1B0F0 /* LaunchScreen.storyboard */,
 				ABA403E31EFE17F400B1B0F0 /* Info.plist */,
 				ABA403CF1EFE17F400B1B0F0 /* Supporting Files */,
+				AB2FB14B1F33EF3100AFCEAC /* SessionManager.h */,
+				AB2FB14C1F33EF3100AFCEAC /* SessionManager.m */,
+				AB2FB1561F341BA600AFCEAC /* ApiManager.h */,
+				AB2FB1571F341BA600AFCEAC /* ApiManager.m */,
 			);
 			path = "Meditation Hub";
 			sourceTree = "<group>";
@@ -80,8 +171,18 @@
 			isa = PBXGroup;
 			children = (
 				ABA403D01EFE17F400B1B0F0 /* main.m */,
+				AB2FB1451F33E84900AFCEAC /* Global.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDF8BF3B7F2D253EF687E5CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D6F35EEC9C8567858A380D5 /* Pods-Meditation Hub.debug.xcconfig */,
+				5A9071A351537163EE76C5BC /* Pods-Meditation Hub.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABA403E61EFE17F400B1B0F0 /* Build configuration list for PBXNativeTarget "Meditation Hub" */;
 			buildPhases = (
+				99D4D5447F9F9B28BB0CEB0C /* [CP] Check Pods Manifest.lock */,
 				ABA403C81EFE17F300B1B0F0 /* Sources */,
 				ABA403C91EFE17F300B1B0F0 /* Frameworks */,
 				ABA403CA1EFE17F300B1B0F0 /* Resources */,
+				D949360544ECC4716C3B3A17 /* [CP] Embed Pods Frameworks */,
+				619F455446ECC4357AFC2551 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,15 +255,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		619F455446ECC4357AFC2551 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meditation Hub/Pods-Meditation Hub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99D4D5447F9F9B28BB0CEB0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D949360544ECC4716C3B3A17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meditation Hub/Pods-Meditation Hub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABA403C81EFE17F300B1B0F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */,
+				AB2FB1581F341BA600AFCEAC /* ApiManager.m in Sources */,
 				ABA403DA1EFE17F400B1B0F0 /* SecondViewController.m in Sources */,
 				ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */,
+				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,
+				AB2FB14A1F33EB0600AFCEAC /* UserEmailLoginRequestModel.m in Sources */,
 				ABA403D71EFE17F400B1B0F0 /* FirstViewController.m in Sources */,
 				ABA403D11EFE17F400B1B0F0 /* main.m in Sources */,
+				AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */,
+				AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */,
+				AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +438,15 @@
 		};
 		ABA403E71EFE17F400B1B0F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D6F35EEC9C8567858A380D5 /* Pods-Meditation Hub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = NX5LQ8JEJ9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Meditation Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idynomite.Meditation-Hub";
@@ -291,9 +456,15 @@
 		};
 		ABA403E81EFE17F400B1B0F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9071A351537163EE76C5BC /* Pods-Meditation Hub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = NX5LQ8JEJ9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Meditation Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idynomite.Meditation-Hub";
@@ -320,6 +491,7 @@
 				ABA403E81EFE17F400B1B0F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <FBSDKApplicationDelegate.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +19,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    
+    
+    //Colors
+    UIColor *navBarTintandTextColor = [UIColor colorWithRed:0.075 green:0.608 blue:0.918 alpha:1.000];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:navBarTintandTextColor, NSForegroundColorAttributeName, [UIFont fontWithName:@"FontName" size:16.0], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:navBarTintandTextColor];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
+    
+    //Set login vs. inside controller based on whether they are logged in.
+    if([self hasValidSession]){
+        NSLog(@"HAS VALID SESSION");
+    }else{
+        NSLog(@"No Valid Session");
+    }
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                        didFinishLaunchingWithOptions:launchOptions];
+}
+
+- (BOOL)hasValidSession {
+    NSLog(@"Checking Session");
+    //Do we have a session token stored?
+    NSString *sessionToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"sessionToken"];
+    if(sessionToken == nil){
+        return NO;
+    }else if(![self verifySession:sessionToken]){
+       return NO;
+    }
     return YES;
+}
+
+- (BOOL)verifySession:(NSString *)sessionToken {
+    //Make the api call to verify the session
+    return NO;
 }
 
 
