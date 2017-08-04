@@ -96,7 +96,7 @@
                              [realm commitWriteTransaction];
                          }
                          
-                         UserRealm *newUser = [[UserRealm alloc] initWithMantleModel:responseModel.user];
+                         UserRealm *newUser = [[UserRealm alloc] initWithMantleModel:(UserModel *)responseModel.user];
                          newUser.sessionToken = responseModel.token;
                          
                          [realm transactionWithBlock:^{

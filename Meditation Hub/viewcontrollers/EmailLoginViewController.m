@@ -9,6 +9,7 @@
 #import "EmailLoginViewController.h"
 #import "UserEmailLoginRequestModel.h"
 #import "ApiManager.h"
+#import "UserRealm.h"
 
 @interface EmailLoginViewController ()
 
@@ -46,24 +47,27 @@
             @autoreleasepool {
                 NSLog(@"Login Response: %@", responseModel);
                 
-//                RLMRealm *realm = [RLMRealm defaultRealm];
-//                [realm beginWriteTransaction];
-//                [realm deleteAllObjects];
-//                [realm commitWriteTransaction];
-//                
-//                [realm beginWriteTransaction];
-//                for(ArticleModel *article in responseModel.articles){
-//                    ArticleRealm *articleRealm = [[ArticleRealm alloc] initWithMantleModel:article]; // (4)
-//                    [realm addObject:articleRealm];
-//                }
-//                [realm commitWriteTransaction];
+                //Remove the user
+                UserRealm *oldUserRealm = [[UserRealm allObjects] firstObject];
                 
-//                dispatch_async(dispatch_get_main_queue(), ^{ // (5)
-//                    RLMRealm *realmMainThread = [RLMRealm defaultRealm]; // (6)
-//                    RLMResults *articles = [ArticleRealm allObjectsInRealm:realmMainThread];
-//                    self.articles = articles; // (7)
-//                    [self.tableView reloadData];
-//                });
+                RLMRealm *realm = [RLMRealm defaultRealm];
+                if([[UserRealm allObjects] count] > 0){
+                    [realm beginWriteTransaction];
+                    [realm deleteObject:oldUserRealm];
+                    [realm commitWriteTransaction];
+                }
+                
+                
+                UserRealm *newUser = [[UserRealm alloc] initWithMantleModel:(UserModel *)responseModel.user];
+                newUser.sessionToken = responseModel.token;
+                [realm transactionWithBlock:^{
+                    [realm addObject:newUser];
+                }];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self signinFinished];
+                });
+                
             }
         });
         
@@ -75,5 +79,12 @@
     } failure:^(NSError *error) {
         NSLog(@"FAILURE CALLING LOGIN API");
     }];
+}
+
+-(void)signinFinished {
+    UIStoryboard *storyboard = self.storyboard;
+    UIViewController *contentViewController;
+    contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
+    [[UIApplication sharedApplication].keyWindow setRootViewController:contentViewController];
 }
 @end
