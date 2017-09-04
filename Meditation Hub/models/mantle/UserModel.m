@@ -14,8 +14,8 @@
 #pragma mark - Mantle JSONKeyPathsByPropertyKey
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"firstName": @"firstName",
-             @"lastName": @"lastName",
+             @"firstName": @"first_name",
+             @"lastName": @"last_name",
              @"email": @"email"
              };
 }
