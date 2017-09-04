@@ -10,5 +10,7 @@
 
 @interface WelcomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *lblWelcomee;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+- (IBAction)tappedNextButton:(id)sender;
 
 @end

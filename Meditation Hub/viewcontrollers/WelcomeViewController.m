@@ -8,6 +8,7 @@
 
 #import "WelcomeViewController.h"
 #import "UserRealm.h"
+#import "WelcomeViewController.h"
 
 @interface WelcomeViewController ()
 
@@ -37,4 +38,20 @@
 }
 */
 
+-(void)determineSegue {
+    //This will invariably run a few operations to determin
+    //Which controller this user should see based on
+    //if they have subscriptions, etc...
+    //For now lets just go to the package list
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    UIViewController *vc;
+    vc = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
+    self.view.window.rootViewController = vc;
+    [[UIApplication sharedApplication].keyWindow setRootViewController:vc];
+    //[self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)tappedNextButton:(id)sender {
+    [self determineSegue];
+}
 @end

@@ -27,6 +27,7 @@
 		ABA403DD1EFE17F400B1B0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA403DB1EFE17F400B1B0F0 /* Main.storyboard */; };
 		ABA403DF1EFE17F400B1B0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA403DE1EFE17F400B1B0F0 /* Assets.xcassets */; };
 		ABA403E21EFE17F400B1B0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA403E01EFE17F400B1B0F0 /* LaunchScreen.storyboard */; };
+		ABC36A0E1F5D331800AECFD1 /* PackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +86,8 @@
 		ABA403DE1EFE17F400B1B0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABA403E11EFE17F400B1B0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABA403E31EFE17F400B1B0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABC36A0C1F5D331800AECFD1 /* PackageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackageListViewController.h; path = viewcontrollers/PackageListViewController.h; sourceTree = "<group>"; };
+		ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PackageListViewController.m; path = viewcontrollers/PackageListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				AB2FB15D1F344E8400AFCEAC /* EmailSignupViewController.m */,
 				AB2FB1921F352CDD00AFCEAC /* WelcomeViewController.h */,
 				AB2FB1931F352CDD00AFCEAC /* WelcomeViewController.m */,
+				ABC36A0C1F5D331800AECFD1 /* PackageListViewController.h */,
+				ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				ABA403D71EFE17F400B1B0F0 /* FirstViewController.m in Sources */,
 				AB2FB15E1F344E8400AFCEAC /* EmailSignupViewController.m in Sources */,
 				ABA403D11EFE17F400B1B0F0 /* main.m in Sources */,
+				ABC36A0E1F5D331800AECFD1 /* PackageListViewController.m in Sources */,
 				AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */,
 				AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */,
 				AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */,
