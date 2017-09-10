@@ -333,8 +333,8 @@
 {
     switch (indexPath.section) {
         case MMDrawerSectionViewSelection:{
-            PackageListViewController * center = [[PackageListViewController alloc] init];
-            
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+            UIViewController * center = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
             UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
             
             if(indexPath.row%2==0){
