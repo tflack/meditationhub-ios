@@ -32,6 +32,18 @@ PODS:
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
   - Reachability (3.2)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
@@ -46,6 +58,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - Mantle (= 2.1.0)
+  - MMDrawerController (= 0.6.0)
   - Reachability
   - Realm
   - SBJson
@@ -59,10 +72,11 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
   FBSDKShareKit: a2ed9d7781a4eda9ac20d7404305e795b10251ac
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   SBJson: 73c848dc34be51fda282fab12bda6c426f5ead08
 
-PODFILE CHECKSUM: 3790763b87335919d4e48a244376cf252f5ab095
+PODFILE CHECKSUM: 930ca3ac655e1f6f8529ef2d0d6e540c37febfe0
 
 COCOAPODS: 1.2.1

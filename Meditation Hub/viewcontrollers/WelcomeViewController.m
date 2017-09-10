@@ -9,9 +9,12 @@
 #import "WelcomeViewController.h"
 #import "UserRealm.h"
 #import "WelcomeViewController.h"
+#import <MMDrawerController.h>
+#import "MMNavigationController.h"
+#import "MMLeftSideDrawerViewController.h"
 
 @interface WelcomeViewController ()
-
+@property (nonatomic,strong) MMDrawerController * drawerController;
 @end
 
 @implementation WelcomeViewController
@@ -44,10 +47,50 @@
     //if they have subscriptions, etc...
     //For now lets just go to the package list
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    UIViewController *vc;
-    vc = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
-    self.view.window.rootViewController = vc;
-    [[UIApplication sharedApplication].keyWindow setRootViewController:vc];
+    UIViewController * leftSideDrawerViewController = [[MMLeftSideDrawerViewController alloc] init];
+    UIViewController * centerViewController = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
+    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:centerViewController];
+    
+    [navigationController setRestorationIdentifier:@"MMCenterNavigationControllerRestorationKey"];
+    UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
+    [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+    
+    self.drawerController = [[MMDrawerController alloc]
+                             initWithCenterViewController:navigationController
+                             leftDrawerViewController:leftSideNavController
+                             rightDrawerViewController:nil];
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+//    [self.drawerController
+//     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+//         MMDrawerControllerDrawerVisualStateBlock block;
+//         block = [[MMExampleDrawerVisualStateManager sharedManager]
+//                  drawerVisualStateBlockForDrawerSide:drawerSide];
+//         if(block){
+//             block(drawerController, drawerSide, percentVisible);
+//         }
+//     }];
+    //self.view.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
+                                          green:173.0/255.0
+                                           blue:234.0/255.0
+                                          alpha:1.0];
+    [self.view.window setTintColor:tintColor];
+    self.view.window.rootViewController = self.drawerController;
+    [[UIApplication sharedApplication].keyWindow setRootViewController:self.drawerController];
+    
+    
+    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+//    UIViewController *vc;
+//    vc = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
+//    self.view.window.rootViewController = vc;
+//    [[UIApplication sharedApplication].keyWindow setRootViewController:vc];
     //[self.navigationController pushViewController:vc animated:YES];
 }
 

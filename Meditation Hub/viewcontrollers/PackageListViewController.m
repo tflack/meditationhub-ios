@@ -7,6 +7,18 @@
 //
 
 #import "PackageListViewController.h"
+#import <MMDrawerBarButtonItem.h>
+#import "MMNavigationController.h"
+#import "UIViewController+MMDrawerController.h"
+
+#import <QuartzCore/QuartzCore.h>
+
+typedef NS_ENUM(NSInteger, MMCenterViewControllerSection){
+    MMCenterViewControllerSectionLeftViewState,
+    MMCenterViewControllerSectionLeftDrawerAnimation,
+    MMCenterViewControllerSectionRightViewState,
+    MMCenterViewControllerSectionRightDrawerAnimation,
+};
 
 @interface PackageListViewController ()
 
@@ -17,6 +29,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+        [self setupLeftMenuButton];
+}
+
+-(void)setupLeftMenuButton{
+    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
+}
+
+#pragma mark - Button Handlers
+-(void)leftDrawerButtonPress:(id)sender{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

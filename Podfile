@@ -18,4 +18,5 @@ target 'Meditation Hub' do
   pod 'FBSDKShareKit'
   
   pod 'Mantle',  '2.1.0'
+  pod 'MMDrawerController', '0.6.0'
 end

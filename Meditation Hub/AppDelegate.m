@@ -13,6 +13,7 @@
 #import "ApiManager.h"
 #import "CurrentUserRequestModel.h"
 #import "CurrentUserResponseModel.h"
+#import "MMDrawerController.h"
 
 @interface AppDelegate ()
 
@@ -121,6 +122,31 @@
     }else{
         completionHandler(NO);
     }
+}
+
+- (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
+{
+    NSString * key = [identifierComponents lastObject];
+    if([key isEqualToString:@"MMDrawer"]){
+        return self.window.rootViewController;
+    }
+    else if ([key isEqualToString:@"MMCenterNavigationControllerRestorationKey"]) {
+        return ((MMDrawerController *)self.window.rootViewController).centerViewController;
+    }
+    else if ([key isEqualToString:@"MMExampleLeftNavigationControllerRestorationKey"]) {
+        return ((MMDrawerController *)self.window.rootViewController).leftDrawerViewController;
+    }
+    else if ([key isEqualToString:@"MMExampleLeftSideDrawerController"]){
+        UIViewController * leftVC = ((MMDrawerController *)self.window.rootViewController).leftDrawerViewController;
+        if([leftVC isKindOfClass:[UINavigationController class]]){
+            return [(UINavigationController*)leftVC topViewController];
+        }
+        else {
+            return leftVC;
+        }
+        
+    }
+    return nil;
 }
 
 

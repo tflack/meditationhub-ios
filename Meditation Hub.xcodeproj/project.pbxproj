@@ -30,6 +30,15 @@
 		ABC36A0E1F5D331800AECFD1 /* PackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */; };
 		ABC36A151F6519D300AECFD1 /* CurrentUserResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A141F6519D300AECFD1 /* CurrentUserResponseModel.m */; };
 		ABC36A181F651B4300AECFD1 /* CurrentUserRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A171F651B4300AECFD1 /* CurrentUserRequestModel.m */; };
+		ABC36A251F65373800AECFD1 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A241F65373800AECFD1 /* MMNavigationController.m */; };
+		ABC36A281F653A1800AECFD1 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A271F653A1800AECFD1 /* UIViewController+MMDrawerController.m */; };
+		ABC36A2C1F653C3900AECFD1 /* MMSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A2B1F653C3900AECFD1 /* MMSideDrawerViewController.m */; };
+		ABC36A2F1F653CA100AECFD1 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A2E1F653CA100AECFD1 /* MMViewController.m */; };
+		ABC36A321F653D1400AECFD1 /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A311F653D1400AECFD1 /* MMLogoView.m */; };
+		ABC36A361F653D8000AECFD1 /* MMSideDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A351F653D8000AECFD1 /* MMSideDrawerTableViewCell.m */; };
+		ABC36A391F653D9600AECFD1 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A381F653D9600AECFD1 /* MMTableViewCell.m */; };
+		ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A3B1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m */; };
+		ABC36A3F1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +103,25 @@
 		ABC36A141F6519D300AECFD1 /* CurrentUserResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentUserResponseModel.m; path = models/mantle/response/CurrentUserResponseModel.m; sourceTree = "<group>"; };
 		ABC36A161F651B4300AECFD1 /* CurrentUserRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentUserRequestModel.h; path = models/mantle/request/CurrentUserRequestModel.h; sourceTree = "<group>"; };
 		ABC36A171F651B4300AECFD1 /* CurrentUserRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentUserRequestModel.m; path = models/mantle/request/CurrentUserRequestModel.m; sourceTree = "<group>"; };
+		ABC36A231F65373800AECFD1 /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
+		ABC36A241F65373800AECFD1 /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
+		ABC36A261F653A1800AECFD1 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		ABC36A271F653A1800AECFD1 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		ABC36A291F653ABA00AECFD1 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		ABC36A2A1F653C3900AECFD1 /* MMSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerViewController.h; sourceTree = "<group>"; };
+		ABC36A2B1F653C3900AECFD1 /* MMSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerViewController.m; sourceTree = "<group>"; };
+		ABC36A2D1F653CA100AECFD1 /* MMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
+		ABC36A2E1F653CA100AECFD1 /* MMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
+		ABC36A301F653D1400AECFD1 /* MMLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogoView.h; sourceTree = "<group>"; };
+		ABC36A311F653D1400AECFD1 /* MMLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLogoView.m; sourceTree = "<group>"; };
+		ABC36A341F653D8000AECFD1 /* MMSideDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerTableViewCell.h; sourceTree = "<group>"; };
+		ABC36A351F653D8000AECFD1 /* MMSideDrawerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerTableViewCell.m; sourceTree = "<group>"; };
+		ABC36A371F653D9600AECFD1 /* MMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCell.h; sourceTree = "<group>"; };
+		ABC36A381F653D9600AECFD1 /* MMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCell.m; sourceTree = "<group>"; };
+		ABC36A3A1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerSectionHeaderView.h; sourceTree = "<group>"; };
+		ABC36A3B1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerSectionHeaderView.m; sourceTree = "<group>"; };
+		ABC36A3D1F653E0500AECFD1 /* MMLeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLeftSideDrawerViewController.h; sourceTree = "<group>"; };
+		ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLeftSideDrawerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +204,7 @@
 		AB8322BF1F33DAF00018EF14 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABC36A191F65350D00AECFD1 /* Drawer */,
 				AB8322BC1F33DAE90018EF14 /* LoginViewController.h */,
 				AB8322BD1F33DAE90018EF14 /* LoginViewController.m */,
 				AB2FB1591F34203600AFCEAC /* EmailLoginViewController.h */,
@@ -247,6 +276,40 @@
 				AB2FB1571F341BA600AFCEAC /* ApiManager.m */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		ABC36A191F65350D00AECFD1 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				ABC36A331F653D6400AECFD1 /* Drawer Table Support */,
+				ABC36A301F653D1400AECFD1 /* MMLogoView.h */,
+				ABC36A311F653D1400AECFD1 /* MMLogoView.m */,
+				ABC36A2D1F653CA100AECFD1 /* MMViewController.h */,
+				ABC36A2E1F653CA100AECFD1 /* MMViewController.m */,
+				ABC36A2A1F653C3900AECFD1 /* MMSideDrawerViewController.h */,
+				ABC36A2B1F653C3900AECFD1 /* MMSideDrawerViewController.m */,
+				ABC36A291F653ABA00AECFD1 /* MMDrawerController+Subclass.h */,
+				ABC36A231F65373800AECFD1 /* MMNavigationController.h */,
+				ABC36A241F65373800AECFD1 /* MMNavigationController.m */,
+				ABC36A261F653A1800AECFD1 /* UIViewController+MMDrawerController.h */,
+				ABC36A271F653A1800AECFD1 /* UIViewController+MMDrawerController.m */,
+				ABC36A3D1F653E0500AECFD1 /* MMLeftSideDrawerViewController.h */,
+				ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */,
+			);
+			name = Drawer;
+			sourceTree = "<group>";
+		};
+		ABC36A331F653D6400AECFD1 /* Drawer Table Support */ = {
+			isa = PBXGroup;
+			children = (
+				ABC36A3A1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.h */,
+				ABC36A3B1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m */,
+				ABC36A371F653D9600AECFD1 /* MMTableViewCell.h */,
+				ABC36A381F653D9600AECFD1 /* MMTableViewCell.m */,
+				ABC36A341F653D8000AECFD1 /* MMSideDrawerTableViewCell.h */,
+				ABC36A351F653D8000AECFD1 /* MMSideDrawerTableViewCell.m */,
+			);
+			name = "Drawer Table Support";
 			sourceTree = "<group>";
 		};
 		CDF8BF3B7F2D253EF687E5CE /* Pods */ = {
@@ -382,23 +445,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC36A3F1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m in Sources */,
 				AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */,
+				ABC36A251F65373800AECFD1 /* MMNavigationController.m in Sources */,
 				ABC36A151F6519D300AECFD1 /* CurrentUserResponseModel.m in Sources */,
 				AB2FB1581F341BA600AFCEAC /* ApiManager.m in Sources */,
 				ABA403DA1EFE17F400B1B0F0 /* SecondViewController.m in Sources */,
 				ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */,
+				ABC36A361F653D8000AECFD1 /* MMSideDrawerTableViewCell.m in Sources */,
+				ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,
 				AB2FB1651F346ADB00AFCEAC /* FacebookLoginRequestModel.m in Sources */,
 				AB2FB14A1F33EB0600AFCEAC /* UserEmailLoginRequestModel.m in Sources */,
+				ABC36A281F653A1800AECFD1 /* UIViewController+MMDrawerController.m in Sources */,
+				ABC36A2F1F653CA100AECFD1 /* MMViewController.m in Sources */,
 				AB2FB1621F346A2A00AFCEAC /* FacebookLoginResponseModel.m in Sources */,
+				ABC36A391F653D9600AECFD1 /* MMTableViewCell.m in Sources */,
 				ABA403D71EFE17F400B1B0F0 /* FirstViewController.m in Sources */,
 				AB2FB15E1F344E8400AFCEAC /* EmailSignupViewController.m in Sources */,
 				ABA403D11EFE17F400B1B0F0 /* main.m in Sources */,
 				ABC36A0E1F5D331800AECFD1 /* PackageListViewController.m in Sources */,
+				ABC36A2C1F653C3900AECFD1 /* MMSideDrawerViewController.m in Sources */,
 				AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */,
 				AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */,
 				AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */,
 				AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */,
+				ABC36A321F653D1400AECFD1 /* MMLogoView.m in Sources */,
 				AB2FB1911F35236900AFCEAC /* UserRealm.m in Sources */,
 				ABC36A181F651B4300AECFD1 /* CurrentUserRequestModel.m in Sources */,
 			);

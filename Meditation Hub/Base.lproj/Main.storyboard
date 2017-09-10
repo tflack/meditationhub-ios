@@ -198,6 +198,22 @@
             </objects>
             <point key="canvasLocation" x="-326" y="-114"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lCs-Cz-8Av">
+            <objects>
+                <navigationController storyboardIdentifier="MMNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Os1-rc-xpf" customClass="MMNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tS6-iI-U0h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FSx-Oe-8Gj" kind="relationship" relationship="rootViewController" id="wth-yf-Fng"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KLn-W5-ZDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="-115"/>
+        </scene>
         <!--Package List View Controller-->
         <scene sceneID="fAs-Ed-qJa">
             <objects>
@@ -211,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6Y-iJ-7a6">
-                                <rect key="frame" x="97" y="44" width="182" height="21"/>
+                                <rect key="frame" x="97" y="88" width="182" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2PH-Pg-45E"/>
                                     <constraint firstAttribute="width" constant="182" id="iB9-yy-hjF"/>
@@ -227,10 +243,11 @@
                             <constraint firstItem="q6Y-iJ-7a6" firstAttribute="top" secondItem="bnO-G2-5vG" secondAttribute="bottom" constant="24" id="xq3-B1-Ps2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="M7N-qk-XNT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSB-R1-Ztf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.80000000000001" y="-115.59220389805098"/>
+            <point key="canvasLocation" x="1590" y="-115"/>
         </scene>
         <!--Email Signup View Controller-->
         <scene sceneID="t0R-LY-NI3">
