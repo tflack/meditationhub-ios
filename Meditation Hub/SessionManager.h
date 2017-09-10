@@ -8,8 +8,10 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+
 @interface SessionManager : AFHTTPSessionManager
 
 + (id)sharedManager;
+-(NSError *)handleError:(NSError *)error withSessionDataTask:(NSURLSessionDataTask *)dataTask;
 
 @end

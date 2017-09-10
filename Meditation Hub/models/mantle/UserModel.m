@@ -16,7 +16,8 @@
     return @{
              @"firstName": @"first_name",
              @"lastName": @"last_name",
-             @"email": @"email"
+             @"email": @"email",
+             @"token": @"token"
              };
 }
 

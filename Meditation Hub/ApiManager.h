@@ -3,6 +3,8 @@
 #import "UserEmailLoginResponseModel.h"
 #import "FacebookLoginRequestModel.h"
 #import "FacebookLoginResponseModel.h"
+#import "CurrentUserResponseModel.h"
+#import "CurrentUserRequestModel.h"
 
 @interface APIManager : SessionManager
 
@@ -10,5 +12,9 @@
 
 
 - (NSURLSessionDataTask *)postFacebookLoginWithRequestModel:(FacebookLoginRequestModel *)requestModel success:(void (^)(FacebookLoginResponseModel *responseModel))success failure:(void (^)(NSError *error))failure;
+
+
+- (NSURLSessionDataTask *)getCurrentUser:(CurrentUserRequestModel *)requestModel success:(void (^)(CurrentUserResponseModel *responseModel))success failure:(void (^)(NSError *error))failure;
+
 
 @end

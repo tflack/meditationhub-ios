@@ -32,4 +32,19 @@
     return _sessionManager;
 }
 
+-(NSError *)handleError:(NSError *)error withSessionDataTask:(NSURLSessionDataTask *)dataTask {
+    NSMutableDictionary *userInfo = [error.userInfo mutableCopy];
+    userInfo[@"auth_failed"] = @NO;
+    
+    NSInteger statusCode = [(NSHTTPURLResponse *)dataTask.response statusCode];
+    if (statusCode != 200) {
+        NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
+        if(statusCode == 403){
+            NSLog(@"Auth Failed");
+            userInfo[@"auth_failed"] = @YES;
+        }
+    }
+    
+    return [NSError errorWithDomain:error.domain code:error.code userInfo:[userInfo copy]];;
+}
 @end

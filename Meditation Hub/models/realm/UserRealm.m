@@ -18,6 +18,7 @@
     self.firstName = userModel.firstName;
     self.lastName = userModel.lastName;
     self.email = userModel.email;
+    self.sessionToken = userModel.token;
     
     return self;
 }

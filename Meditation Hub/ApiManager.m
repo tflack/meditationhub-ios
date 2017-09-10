@@ -8,9 +8,11 @@
 
 #import "ApiManager.h"
 #import "Mantle.h"
+#import "UserRealm.h"
 
 static NSString *const kUserEmailLoginPath = @"/auth/email";
 static NSString *const kFacebookLoginPath = @"/auth/facebook";
+static NSString *const kCurrentUserPath = @"/user/me";
 
 @implementation APIManager
 
@@ -20,7 +22,7 @@ static NSString *const kFacebookLoginPath = @"/auth/facebook";
     
     NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
     NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
-    //[self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"X-Auth-Token"];
+    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"X-Auth-Token"];
     
     return [self POST:kUserEmailLoginPath parameters:parametersWithKey progress:nil
              success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -33,8 +35,7 @@ static NSString *const kFacebookLoginPath = @"/auth/facebook";
                  success(loginResponse);
                  
              } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                 failure(error);
-                 
+                 failure([self handleError:error withSessionDataTask:task]);
              }];
 }
 
@@ -58,8 +59,33 @@ static NSString *const kFacebookLoginPath = @"/auth/facebook";
                   success(loginResponse);
                   
               } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                  failure(error);
+                  failure([self handleError:error withSessionDataTask:task]);
                   
+              }];
+}
+
+- (NSURLSessionDataTask *)getCurrentUser:(CurrentUserRequestModel *)requestModel
+                                                    success:(void (^)(CurrentUserResponseModel *responseModel))success
+                                                    failure:(void (^)(NSError *error))failure{
+    
+//    NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
+//    NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
+//    
+    UserRealm *userRealm = [[UserRealm allObjects] firstObject];
+    [self.requestSerializer setValue:[userRealm valueForKey:@"sessionToken"] forHTTPHeaderField:@"X-Auth-Token"];
+    
+    return [self GET:kCurrentUserPath parameters:nil progress:nil
+              success:^(NSURLSessionDataTask *task, id responseObject) {
+                  
+                  NSDictionary *responseDictionary = (NSDictionary *)responseObject;
+                  
+                  NSError *error;
+                  CurrentUserResponseModel *response = [MTLJSONAdapter modelOfClass:CurrentUserResponseModel.class
+                                                                        fromJSONDictionary:responseDictionary error:&error];
+                  success(response);
+                  
+              } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                  failure([self handleError:error withSessionDataTask:task]);
               }];
 }
 

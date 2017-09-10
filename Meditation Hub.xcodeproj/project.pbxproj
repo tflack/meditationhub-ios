@@ -28,6 +28,8 @@
 		ABA403DF1EFE17F400B1B0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA403DE1EFE17F400B1B0F0 /* Assets.xcassets */; };
 		ABA403E21EFE17F400B1B0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA403E01EFE17F400B1B0F0 /* LaunchScreen.storyboard */; };
 		ABC36A0E1F5D331800AECFD1 /* PackageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */; };
+		ABC36A151F6519D300AECFD1 /* CurrentUserResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A141F6519D300AECFD1 /* CurrentUserResponseModel.m */; };
+		ABC36A181F651B4300AECFD1 /* CurrentUserRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A171F651B4300AECFD1 /* CurrentUserRequestModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +90,10 @@
 		ABA403E31EFE17F400B1B0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABC36A0C1F5D331800AECFD1 /* PackageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackageListViewController.h; path = viewcontrollers/PackageListViewController.h; sourceTree = "<group>"; };
 		ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PackageListViewController.m; path = viewcontrollers/PackageListViewController.m; sourceTree = "<group>"; };
+		ABC36A131F6519D300AECFD1 /* CurrentUserResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentUserResponseModel.h; path = models/mantle/response/CurrentUserResponseModel.h; sourceTree = "<group>"; };
+		ABC36A141F6519D300AECFD1 /* CurrentUserResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentUserResponseModel.m; path = models/mantle/response/CurrentUserResponseModel.m; sourceTree = "<group>"; };
+		ABC36A161F651B4300AECFD1 /* CurrentUserRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentUserRequestModel.h; path = models/mantle/request/CurrentUserRequestModel.h; sourceTree = "<group>"; };
+		ABC36A171F651B4300AECFD1 /* CurrentUserRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentUserRequestModel.m; path = models/mantle/request/CurrentUserRequestModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,8 @@
 				AB2FB1491F33EB0600AFCEAC /* UserEmailLoginRequestModel.m */,
 				AB2FB1631F346ADB00AFCEAC /* FacebookLoginRequestModel.h */,
 				AB2FB1641F346ADB00AFCEAC /* FacebookLoginRequestModel.m */,
+				ABC36A161F651B4300AECFD1 /* CurrentUserRequestModel.h */,
+				ABC36A171F651B4300AECFD1 /* CurrentUserRequestModel.m */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -150,6 +158,8 @@
 				AB2FB1541F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m */,
 				AB2FB1601F346A2A00AFCEAC /* FacebookLoginResponseModel.h */,
 				AB2FB1611F346A2A00AFCEAC /* FacebookLoginResponseModel.m */,
+				ABC36A131F6519D300AECFD1 /* CurrentUserResponseModel.h */,
+				ABC36A141F6519D300AECFD1 /* CurrentUserResponseModel.m */,
 			);
 			name = Response;
 			sourceTree = "<group>";
@@ -201,6 +211,7 @@
 		ABA403CE1EFE17F400B1B0F0 /* Meditation Hub */ = {
 			isa = PBXGroup;
 			children = (
+				ABC36A0F1F65067800AECFD1 /* API */,
 				AB2FB1461F33EAB900AFCEAC /* Models */,
 				AB8322BF1F33DAF00018EF14 /* ViewControllers */,
 				ABA403D21EFE17F400B1B0F0 /* AppDelegate.h */,
@@ -214,10 +225,6 @@
 				ABA403E01EFE17F400B1B0F0 /* LaunchScreen.storyboard */,
 				ABA403E31EFE17F400B1B0F0 /* Info.plist */,
 				ABA403CF1EFE17F400B1B0F0 /* Supporting Files */,
-				AB2FB14B1F33EF3100AFCEAC /* SessionManager.h */,
-				AB2FB14C1F33EF3100AFCEAC /* SessionManager.m */,
-				AB2FB1561F341BA600AFCEAC /* ApiManager.h */,
-				AB2FB1571F341BA600AFCEAC /* ApiManager.m */,
 			);
 			path = "Meditation Hub";
 			sourceTree = "<group>";
@@ -229,6 +236,17 @@
 				AB2FB1451F33E84900AFCEAC /* Global.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABC36A0F1F65067800AECFD1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AB2FB14B1F33EF3100AFCEAC /* SessionManager.h */,
+				AB2FB14C1F33EF3100AFCEAC /* SessionManager.m */,
+				AB2FB1561F341BA600AFCEAC /* ApiManager.h */,
+				AB2FB1571F341BA600AFCEAC /* ApiManager.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		CDF8BF3B7F2D253EF687E5CE /* Pods */ = {
@@ -365,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */,
+				ABC36A151F6519D300AECFD1 /* CurrentUserResponseModel.m in Sources */,
 				AB2FB1581F341BA600AFCEAC /* ApiManager.m in Sources */,
 				ABA403DA1EFE17F400B1B0F0 /* SecondViewController.m in Sources */,
 				ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */,
@@ -381,6 +400,7 @@
 				AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */,
 				AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */,
 				AB2FB1911F35236900AFCEAC /* UserRealm.m in Sources */,
+				ABC36A181F651B4300AECFD1 /* CurrentUserRequestModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
