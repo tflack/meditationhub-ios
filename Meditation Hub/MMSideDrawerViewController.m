@@ -25,6 +25,7 @@
 #import "MMSideDrawerSectionHeaderView.h"
 #import "MMLogoView.h"
 #import "MMNavigationController.h"
+#import "UserRealm.h"
 
 @implementation MMSideDrawerViewController
 
@@ -272,7 +273,7 @@
             break;
         }
         case MMDrawerSectionStretchDrawer:{
-            [cell.textLabel setText:@"Stretch Drawer"];
+            [cell.textLabel setText:@"Logout"];
             if(self.mm_drawerController.shouldStretchDrawer)
                 [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
             else
@@ -410,8 +411,30 @@
             break;
         }
         case MMDrawerSectionStretchDrawer:{
-            self.mm_drawerController.shouldStretchDrawer = !self.mm_drawerController.shouldStretchDrawer;
-            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            //self.mm_drawerController.shouldStretchDrawer = !self.mm_drawerController.shouldStretchDrawer;
+            //[tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            
+            NSLog(@"Log Out");
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                @autoreleasepool {
+                    UserRealm *currentUser = [[UserRealm allObjects] firstObject];
+                    RLMRealm *realm = [RLMRealm defaultRealm];
+                    if([[UserRealm allObjects] count] > 0){
+                        [realm beginWriteTransaction];
+                        [realm deleteObject:currentUser];
+                        [realm commitWriteTransaction];
+                    }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        //Go to login
+                        //[self.view.window.rootViewController.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+                        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+                        self.view.window.rootViewController = vc;
+                        [self.view.window makeKeyAndVisible];
+                    });
+                }
+            });
+            
             break;
         }
         default:
