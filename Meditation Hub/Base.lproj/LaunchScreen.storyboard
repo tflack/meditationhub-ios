@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,19 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingpage" translatesAutoresizingMaskIntoConstraints="NO" id="ing-XD-7AG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="OVm-ax-Isv">
+                                <rect key="frame" x="44" y="121" width="286" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ing-XD-7AG" secondAttribute="height" multiplier="375:667" id="SGJ-Oq-PEo"/>
+                                    <constraint firstAttribute="width" constant="286" id="Bod-l1-EdT"/>
+                                    <constraint firstAttribute="height" constant="195" id="lCq-92-ham"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ing-XD-7AG" secondAttribute="trailing" id="eHj-pd-h9F"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ing-XD-7AG" secondAttribute="bottom" id="jLP-4w-XQt"/>
-                            <constraint firstItem="ing-XD-7AG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="rdk-45-k2T"/>
-                            <constraint firstItem="ing-XD-7AG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="wk0-ZC-MTf"/>
+                            <constraint firstItem="OVm-ax-Isv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BLX-FZ-1FZ"/>
+                            <constraint firstItem="OVm-ax-Isv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="101" id="Bux-w5-ybS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="landingpage" width="750" height="1334"/>
+        <image name="mainlogo" width="300" height="206"/>
     </resources>
 </document>
