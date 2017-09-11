@@ -58,7 +58,7 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    [self setTitle:@"Left Drawer"];
+    //[self setTitle:@"Left Drawer"];
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -69,22 +69,4 @@
     UITableViewCell * cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     return cell;
 }
-
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if(indexPath.section == MMDrawerSectionDrawerWidth){
-//        [self.mm_drawerController
-//         setMaximumLeftDrawerWidth:[self.drawerWidths[indexPath.row] floatValue]
-//         animated:YES
-//         completion:^(BOOL finished) {
-//             [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
-//             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-//             [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//         }];
-//
-//    }
-//    else {
-//        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-//    }
-//}
-
 @end

@@ -20,6 +20,7 @@
 
 #import "MMSideDrawerSectionHeaderView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Global.h"
 
 @interface MMSideDrawerSectionHeaderView ()
 @property (nonatomic, strong) UILabel * label;
@@ -32,11 +33,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-
-        [self setBackgroundColor:[UIColor colorWithRed:110./255.0
-                                                 green:113.0/255.0
-                                                  blue:115.0/255.0
-                                                 alpha:1.0]];
+        [self setBackgroundColor:LEFT_DRAWER_BACKGROUND_COLOR];
         
         _label = [[UILabel alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(self.bounds)-28,CGRectGetWidth(self.bounds)-30, 22)];
 

@@ -26,6 +26,7 @@
 #import "MMLogoView.h"
 #import "MMNavigationController.h"
 #import "UserRealm.h"
+#import "Global.h"
 
 @implementation MMSideDrawerViewController
 
@@ -40,49 +41,31 @@
     [self.view addSubview:self.tableView];
     [self.tableView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     
-    UIColor * tableViewBackgroundColor;
-    tableViewBackgroundColor = [UIColor colorWithRed:110.0/255.0
-                                               green:113.0/255.0
-                                                blue:115.0/255.0
-                                               alpha:1.0];
-    [self.tableView setBackgroundColor:tableViewBackgroundColor];
+    [self.tableView setBackgroundColor:LEFT_DRAWER_BACKGROUND_COLOR];
     
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:66.0/255.0
-                                                  green:69.0/255.0
-                                                   blue:71.0/255.0
-                                                  alpha:1.0]];
-    
-    UIColor * barColor = [UIColor colorWithRed:161.0/255.0
-                                         green:164.0/255.0
-                                          blue:166.0/255.0
-                                         alpha:1.0];
+    [self.view setBackgroundColor:LEFT_DRAWER_BACKGROUND_COLOR];
+
     if([self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)]){
-        [self.navigationController.navigationBar setBarTintColor:barColor];
+        [self.navigationController.navigationBar setBarTintColor:LEFT_DRAWER_BACKGROUND_COLOR];
     }
     else {
-        [self.navigationController.navigationBar setTintColor:barColor];
+        [self.navigationController.navigationBar setTintColor:LEFT_DRAWER_BACKGROUND_COLOR];
     }
 
 
     NSDictionary *navBarTitleDict;
-    UIColor * titleColor = [UIColor colorWithRed:55.0/255.0
-                                           green:70.0/255.0
-                                            blue:77.0/255.0
-                                           alpha:1.0];
-    navBarTitleDict = @{NSForegroundColorAttributeName:titleColor};
+    navBarTitleDict = @{NSForegroundColorAttributeName:LEFT_DRAWER_BACKGROUND_COLOR};
     [self.navigationController.navigationBar setTitleTextAttributes:navBarTitleDict];
     
-    self.drawerWidths = @[@(160),@(200),@(240),@(280),@(320)];
-    
-    CGSize logoSize = CGSizeMake(58, 62);
-    MMLogoView * logo = [[MMLogoView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.tableView.bounds)-logoSize.width/2.0,
-                                                                     -logoSize.height-logoSize.height/4.0,
-                                                                     logoSize.width,
-                                                                     logoSize.height)];
-    [logo setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
-    [self.tableView addSubview:logo];
+//    CGSize logoSize = CGSizeMake(58, 62);
+//    MMLogoView * logo = [[MMLogoView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.tableView.bounds)-logoSize.width/2.0,
+//                                                                     -logoSize.height-logoSize.height/4.0,
+//                                                                     logoSize.width,
+//                                                                     logoSize.height)];
+//    [logo setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
+//    [self.tableView addSubview:logo];
     [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
@@ -106,7 +89,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 7;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

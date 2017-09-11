@@ -20,6 +20,7 @@
 
 
 #import "MMSideDrawerTableViewCell.h"
+#import "Global.h"
 
 @implementation MMSideDrawerTableViewCell
 
@@ -31,12 +32,7 @@
 
         UIView * backgroundView = [[UIView alloc] initWithFrame:self.bounds];
         [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
-        UIColor * backgroundColor;
-        backgroundColor = [UIColor colorWithRed:122.0/255.0
-                                          green:126.0/255.0
-                                           blue:128.0/255.0
-                                          alpha:1.0];
-        [backgroundView setBackgroundColor:backgroundColor];
+        [backgroundView setBackgroundColor:LEFT_DRAWER_BACKGROUND_COLOR];
 
         [self setBackgroundView:backgroundView];
         
