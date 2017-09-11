@@ -79,27 +79,27 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainlogo" translatesAutoresizingMaskIntoConstraints="NO" id="flC-pf-QuR">
-                                <rect key="frame" x="45" y="102" width="286" height="194"/>
+                                <rect key="frame" x="44" y="121" width="286" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="194" id="Fii-ua-odp"/>
-                                    <constraint firstAttribute="width" constant="286" id="wJn-JA-oyB"/>
+                                    <constraint firstAttribute="width" constant="286" id="ff3-0Q-4ly"/>
+                                    <constraint firstAttribute="height" constant="195" id="y9Q-WR-Mt3"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cwc-hM-5nG" firstAttribute="top" secondItem="Qgb-8R-ckj" secondAttribute="bottom" constant="19" id="6Lx-zz-Go6"/>
-                            <constraint firstItem="flC-pf-QuR" firstAttribute="top" secondItem="Zby-qa-WXG" secondAttribute="bottom" constant="82" id="8FY-Ee-ccO"/>
                             <constraint firstItem="Q2t-P7-5Dv" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="9mA-t6-9JK"/>
                             <constraint firstItem="SzI-CM-OVy" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="Bnk-lu-Zk3"/>
                             <constraint firstItem="SzI-CM-OVy" firstAttribute="top" secondItem="cwc-hM-5nG" secondAttribute="bottom" constant="3" id="IH3-BG-OIa"/>
-                            <constraint firstItem="flC-pf-QuR" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="J2G-Jx-TLk"/>
+                            <constraint firstItem="flC-pf-QuR" firstAttribute="top" secondItem="Zby-qa-WXG" secondAttribute="bottom" constant="101" id="Iwu-Q0-DIX"/>
                             <constraint firstItem="D7w-tT-ceE" firstAttribute="top" secondItem="Q2t-P7-5Dv" secondAttribute="bottom" id="Jl8-Lg-riD"/>
                             <constraint firstItem="vle-AD-1p6" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="P1l-vr-WjH"/>
                             <constraint firstItem="Q2t-P7-5Dv" firstAttribute="top" secondItem="SzI-CM-OVy" secondAttribute="bottom" constant="28" id="XNb-AN-CM5"/>
                             <constraint firstItem="Qgb-8R-ckj" firstAttribute="top" secondItem="vle-AD-1p6" secondAttribute="bottom" constant="8" id="YaE-fF-7o6"/>
                             <constraint firstItem="cwc-hM-5nG" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="apg-3y-XYx"/>
                             <constraint firstItem="Qgb-8R-ckj" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="eOV-Fd-yO0"/>
+                            <constraint firstItem="flC-pf-QuR" firstAttribute="centerX" secondItem="p8w-45-E6l" secondAttribute="centerX" id="k0L-FM-Ovs"/>
                         </constraints>
                     </view>
                 </viewController>
