@@ -214,6 +214,53 @@
             </objects>
             <point key="canvasLocation" x="734" y="-115"/>
         </scene>
+        <!--Logout View Controller-->
+        <scene sceneID="mnr-dy-Yp6">
+            <objects>
+                <viewController storyboardIdentifier="logoutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o8u-lk-NWg" customClass="LogoutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZF-YN-IaV"/>
+                        <viewControllerLayoutGuide type="bottom" id="8CQ-Z7-m94"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yBU-6s-w7y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logging Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKu-Hz-lms">
+                                <rect key="frame" x="88" y="98" width="199" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="0Y6-sg-xa5"/>
+                                    <constraint firstAttribute="height" constant="21" id="qjP-c7-d9o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jMD-xY-R3g">
+                                <rect key="frame" x="169" y="137" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="FQy-OF-BuU"/>
+                                    <constraint firstAttribute="width" constant="37" id="S1z-bT-e1Z"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lKu-Hz-lms" firstAttribute="centerX" secondItem="yBU-6s-w7y" secondAttribute="centerX" id="KhR-Sg-QBd"/>
+                            <constraint firstItem="jMD-xY-R3g" firstAttribute="top" secondItem="lKu-Hz-lms" secondAttribute="bottom" constant="18" id="kLU-xL-zYG"/>
+                            <constraint firstItem="lKu-Hz-lms" firstAttribute="top" secondItem="cZF-YN-IaV" secondAttribute="bottom" constant="78" id="ke6-4V-AWV"/>
+                            <constraint firstItem="jMD-xY-R3g" firstAttribute="centerX" secondItem="yBU-6s-w7y" secondAttribute="centerX" id="lyk-li-Np4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityView" destination="jMD-xY-R3g" id="M4i-ue-B0x"/>
+                        <outlet property="logoutLabel" destination="lKu-Hz-lms" id="81l-3r-TGd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulY-UE-eZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.400000000000006" y="573.46326836581716"/>
+        </scene>
         <!--Package List View Controller-->
         <scene sceneID="fAs-Ed-qJa">
             <objects>

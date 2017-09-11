@@ -62,45 +62,29 @@
 }
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    
-    if(section == MMDrawerSectionDrawerWidth)
-        return @"Left Drawer Width";
-    else
-        return [super tableView:tableView titleForHeaderInSection:section];
+    return [super tableView:tableView titleForHeaderInSection:section];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
-    if(indexPath.section == MMDrawerSectionDrawerWidth){
-
-        CGFloat width = [self.drawerWidths[indexPath.row] intValue];
-        CGFloat drawerWidth = self.mm_drawerController.maximumLeftDrawerWidth;
-        if(drawerWidth == width){
-            [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        }
-        else{
-            [cell setAccessoryType:UITableViewCellAccessoryNone];
-        }
-        [cell.textLabel setText:[NSString stringWithFormat:@"Width %d",[self.drawerWidths[indexPath.row] intValue]]];
-    }
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == MMDrawerSectionDrawerWidth){
-        [self.mm_drawerController
-         setMaximumLeftDrawerWidth:[self.drawerWidths[indexPath.row] floatValue]
-         animated:YES
-         completion:^(BOOL finished) {
-             [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
-             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-             [tableView deselectRowAtIndexPath:indexPath animated:YES];
-         }];
-
-    }
-    else {
-        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
-    }
-}
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if(indexPath.section == MMDrawerSectionDrawerWidth){
+//        [self.mm_drawerController
+//         setMaximumLeftDrawerWidth:[self.drawerWidths[indexPath.row] floatValue]
+//         animated:YES
+//         completion:^(BOOL finished) {
+//             [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
+//             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+//             [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//         }];
+//
+//    }
+//    else {
+//        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+//    }
+//}
 
 @end

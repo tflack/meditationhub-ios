@@ -39,6 +39,7 @@
 		ABC36A391F653D9600AECFD1 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A381F653D9600AECFD1 /* MMTableViewCell.m */; };
 		ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A3B1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m */; };
 		ABC36A3F1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */; };
+		ABC36A421F6676E400AECFD1 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A411F6676E400AECFD1 /* LogoutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +123,8 @@
 		ABC36A3B1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerSectionHeaderView.m; sourceTree = "<group>"; };
 		ABC36A3D1F653E0500AECFD1 /* MMLeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLeftSideDrawerViewController.h; sourceTree = "<group>"; };
 		ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLeftSideDrawerViewController.m; sourceTree = "<group>"; };
+		ABC36A401F6676E400AECFD1 /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoutViewController.h; path = viewcontrollers/LogoutViewController.h; sourceTree = "<group>"; };
+		ABC36A411F6676E400AECFD1 /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoutViewController.m; path = viewcontrollers/LogoutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,8 @@
 				AB2FB1931F352CDD00AFCEAC /* WelcomeViewController.m */,
 				ABC36A0C1F5D331800AECFD1 /* PackageListViewController.h */,
 				ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */,
+				ABC36A401F6676E400AECFD1 /* LogoutViewController.h */,
+				ABC36A411F6676E400AECFD1 /* LogoutViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,
 				AB2FB1651F346ADB00AFCEAC /* FacebookLoginRequestModel.m in Sources */,
 				AB2FB14A1F33EB0600AFCEAC /* UserEmailLoginRequestModel.m in Sources */,
+				ABC36A421F6676E400AECFD1 /* LogoutViewController.m in Sources */,
 				ABC36A281F653A1800AECFD1 /* UIViewController+MMDrawerController.m in Sources */,
 				ABC36A2F1F653CA100AECFD1 /* MMViewController.m in Sources */,
 				AB2FB1621F346A2A00AFCEAC /* FacebookLoginResponseModel.m in Sources */,

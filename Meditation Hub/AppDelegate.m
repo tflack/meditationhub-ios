@@ -34,6 +34,8 @@
     [[UINavigationBar appearance] setTintColor:navBarTintandTextColor];
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
 }

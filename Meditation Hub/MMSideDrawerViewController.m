@@ -113,20 +113,10 @@
 {
     // Return the number of rows in the section.
     switch (section) {
-        case MMDrawerSectionViewSelection:
+        case MMDrawerSectionViewContent:
             return 2;
-        case MMDrawerSectionDrawerWidth:
-            return self.drawerWidths.count;
-        case MMDrawerSectionShadowToggle:
-            return 1;
-        case MMDrawerSectionOpenDrawerGestures:
-            return 3;
-        case MMDrawerSectionCloseDrawerGestures:
-            return 6;
-        case MMDrawerSectionCenterHiddenInteraction:
-            return 3;
-        case MMDrawerSectionStretchDrawer:
-            return 1;
+        case MMDrawerSectionAccount:
+            return 2;
         default:
             return 0;
     }
@@ -144,140 +134,31 @@
     }
     
     switch (indexPath.section) {
-        case MMDrawerSectionViewSelection:
-            if(indexPath.row == 0){
-                [cell.textLabel setText:@"Quick View Change"];
-            }
-            else {
-                [cell.textLabel setText:@"Full View Change"];
+        case MMDrawerSectionViewContent:
+            switch (indexPath.row) {
+                case 0:
+                    [cell.textLabel setText:@"Packages"];
+                    break;
+                case 1:
+                    [cell.textLabel setText:@"Subscriptions"];
+                    break;
+                default:
+                    break;
             }
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
-        case MMDrawerSectionDrawerWidth:{
-            //Implement in Subclass
-            break;
-        }
-        case MMDrawerSectionShadowToggle:{
-            [cell.textLabel setText:@"Show Shadow"];
-            if(self.mm_drawerController.showsShadow)
-                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-            else
-                [cell setAccessoryType:UITableViewCellAccessoryNone];
-            break;
-        }
-        case MMDrawerSectionOpenDrawerGestures:{
+        case MMDrawerSectionAccount:{
             switch (indexPath.row) {
                 case 0:
-                    [cell.textLabel setText:@"Pan Nav Bar"];
-                    if((self.mm_drawerController.openDrawerGestureModeMask&MMOpenDrawerGestureModePanningNavigationBar)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
+                    [cell.textLabel setText:@"Settings"];
                     break;
                 case 1:
-                    [cell.textLabel setText:@"Pan Center View"];
-                    if((self.mm_drawerController.openDrawerGestureModeMask&MMOpenDrawerGestureModePanningCenterView)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 2:
-                    [cell.textLabel setText:@"Bezel Pan Center View"];
-                    if((self.mm_drawerController.openDrawerGestureModeMask&MMOpenDrawerGestureModeBezelPanningCenterView)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
+                    [cell.textLabel setText:@"Logout"];
                     break;
                 default:
                     break;
             }
-            break;
-        }
-        case MMDrawerSectionCloseDrawerGestures:{
-            switch (indexPath.row) {
-                case 0:
-                    [cell.textLabel setText:@"Pan Nav Bar"];
-                    if((self.mm_drawerController.closeDrawerGestureModeMask&MMCloseDrawerGestureModePanningNavigationBar)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 1:
-                    [cell.textLabel setText:@"Pan Center View"];
-                    if((self.mm_drawerController.closeDrawerGestureModeMask&MMCloseDrawerGestureModePanningCenterView)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 2:
-                    [cell.textLabel setText:@"Bezel Pan Center View"];
-                    if((self.mm_drawerController.closeDrawerGestureModeMask&MMCloseDrawerGestureModeBezelPanningCenterView)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 3:
-                    [cell.textLabel setText:@"Tap Nav Bar"];
-                    if((self.mm_drawerController.closeDrawerGestureModeMask&MMCloseDrawerGestureModeTapNavigationBar)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 4:
-                    [cell.textLabel setText:@"Tap Center View"];
-                    if((self.mm_drawerController.closeDrawerGestureModeMask&MMCloseDrawerGestureModeTapCenterView)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 5:
-                    [cell.textLabel setText:@"Pan Drawer View"];
-                    if((self.mm_drawerController.closeDrawerGestureModeMask&MMCloseDrawerGestureModePanningDrawerView)>0)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                default:
-                    break;
-            }
-            break;
-        }
-        case MMDrawerSectionCenterHiddenInteraction:{
-            [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
-            switch (indexPath.row) {
-                case 0:
-                    [cell.textLabel setText:@"None"];
-                    if(self.mm_drawerController.centerHiddenInteractionMode == MMDrawerOpenCenterInteractionModeNone)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 1:
-                    [cell.textLabel setText:@"Full"];
-                    if(self.mm_drawerController.centerHiddenInteractionMode == MMDrawerOpenCenterInteractionModeFull)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                case 2:
-                    [cell.textLabel setText:@"Nav Bar Only"];
-                    if(self.mm_drawerController.centerHiddenInteractionMode == MMDrawerOpenCenterInteractionModeNavigationBarOnly)
-                        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-                    else
-                        [cell setAccessoryType:UITableViewCellAccessoryNone];
-                    break;
-                    
-                default:
-                    break;
-            }
-            break;
-        }
-        case MMDrawerSectionStretchDrawer:{
-            [cell.textLabel setText:@"Logout"];
-            if(self.mm_drawerController.shouldStretchDrawer)
-                [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-            else
-                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
         }
         default:
@@ -289,20 +170,10 @@
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     switch (section) {
-        case MMDrawerSectionViewSelection:
-            return @"New Center View";
-        case MMDrawerSectionDrawerWidth:
-            return @"Drawer Width";
-        case MMDrawerSectionShadowToggle:
-            return @"Shadow";
-        case MMDrawerSectionOpenDrawerGestures:
-            return @"Drawer Open Gestures";
-        case MMDrawerSectionCloseDrawerGestures:
-            return @"Drawer Close Gestures";
-        case MMDrawerSectionCenterHiddenInteraction:
-            return @"Open Center Interaction Mode";
-        case MMDrawerSectionStretchDrawer:
-            return @"Strech Drawer";
+        case MMDrawerSectionViewContent:
+            return @"Content";
+        case MMDrawerSectionAccount:
+            return @"Account";
         default:
             return nil;
     }
@@ -332,108 +203,63 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     switch (indexPath.section) {
-        case MMDrawerSectionViewSelection:{
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-            UIViewController * center = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
+        case MMDrawerSectionViewContent:{
+            NSString *controllerIdentifier;
+            switch (indexPath.row) {
+                case 0:
+                    NSLog(@"SELECTED PACKAGES");
+                    controllerIdentifier = @"packageListViewController";
+                    break;
+                case 1:
+                    NSLog(@"SELECTED SUBSCRIPTIONS");
+                    controllerIdentifier = @"subscriptionsViewController";
+                    break;
+                default:
+                    break;
+            }
+            
+            UIViewController * center = [storyboard instantiateViewControllerWithIdentifier:controllerIdentifier];
             UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
             
-            if(indexPath.row%2==0){
-                [self.mm_drawerController
-                 setCenterViewController:nav
-                 withCloseAnimation:YES
-                 completion:nil];
-            }
-            else {
-                [self.mm_drawerController
-                 setCenterViewController:nav
-                 withFullCloseAnimation:YES
-                 completion:nil];
-            }
+            [self.mm_drawerController
+                              setCenterViewController:nav
+                              withCloseAnimation:YES
+                              completion:nil];
+            
+            
+            //DIFFFERENT ANIMATION
+            //                [self.mm_drawerController
+            //                 setCenterViewController:nav
+            //                 withFullCloseAnimation:YES
+            //                 completion:nil];
+            
             break;
         }
             
-        case MMDrawerSectionDrawerWidth:{
-            //Implement in Subclass
-            break;
-        }
-        case MMDrawerSectionShadowToggle:{
-            [self.mm_drawerController setShowsShadow:!self.mm_drawerController.showsShadow];
-            [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
-            break;
-        }
-        case MMDrawerSectionOpenDrawerGestures:{
+        case MMDrawerSectionAccount:{
+            NSString *controllerIdentifier;
             switch (indexPath.row) {
                 case 0:
-                    self.mm_drawerController.openDrawerGestureModeMask ^= MMOpenDrawerGestureModePanningNavigationBar;
+                    NSLog(@"SELECTED SETTINGS");
+                    controllerIdentifier = @"settingsViewController";
                     break;
                 case 1:
-                    self.mm_drawerController.openDrawerGestureModeMask ^=  MMOpenDrawerGestureModePanningCenterView;
-                    break;
-                case 2:
-                    self.mm_drawerController.openDrawerGestureModeMask ^=  MMOpenDrawerGestureModeBezelPanningCenterView;
+                    NSLog(@"SELECTED LOGOUT");
+                    controllerIdentifier = @"logoutViewController";
                     break;
                 default:
                     break;
             }
-            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-            break;
-        }
-        case MMDrawerSectionCloseDrawerGestures:{
-            switch (indexPath.row) {
-                case 0:
-                    self.mm_drawerController.closeDrawerGestureModeMask ^= MMCloseDrawerGestureModePanningNavigationBar;
-                    break;
-                case 1:
-                    self.mm_drawerController.closeDrawerGestureModeMask ^= MMCloseDrawerGestureModePanningCenterView;
-                    break;
-                case 2:
-                    self.mm_drawerController.closeDrawerGestureModeMask ^= MMCloseDrawerGestureModeBezelPanningCenterView;
-                    break;
-                case 3:
-                    self.mm_drawerController.closeDrawerGestureModeMask ^= MMCloseDrawerGestureModeTapNavigationBar;
-                    break;
-                case 4:
-                    self.mm_drawerController.closeDrawerGestureModeMask ^= MMCloseDrawerGestureModeTapCenterView;
-                    break;
-                case 5:
-                    self.mm_drawerController.closeDrawerGestureModeMask ^= MMCloseDrawerGestureModePanningDrawerView;
-                    break;
-                default:
-                    break;
-            }
-            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-            break;
-        }
-        case MMDrawerSectionCenterHiddenInteraction:{
-            self.mm_drawerController.centerHiddenInteractionMode = indexPath.row;
-            [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
-            break;
-        }
-        case MMDrawerSectionStretchDrawer:{
-            //self.mm_drawerController.shouldStretchDrawer = !self.mm_drawerController.shouldStretchDrawer;
-            //[tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
             
-            NSLog(@"Log Out");
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                @autoreleasepool {
-                    UserRealm *currentUser = [[UserRealm allObjects] firstObject];
-                    RLMRealm *realm = [RLMRealm defaultRealm];
-                    if([[UserRealm allObjects] count] > 0){
-                        [realm beginWriteTransaction];
-                        [realm deleteObject:currentUser];
-                        [realm commitWriteTransaction];
-                    }
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        //Go to login
-                        //[self.view.window.rootViewController.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-                        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
-                        self.view.window.rootViewController = vc;
-                        [self.view.window makeKeyAndVisible];
-                    });
-                }
-            });
+            UIViewController * center = [storyboard instantiateViewControllerWithIdentifier:controllerIdentifier];
+            UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
+            
+            [self.mm_drawerController
+             setCenterViewController:nav
+             withCloseAnimation:YES
+             completion:nil];
             
             break;
         }

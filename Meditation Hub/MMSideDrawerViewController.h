@@ -24,13 +24,8 @@
 #import "MMViewController.h"
 
 typedef NS_ENUM(NSInteger, MMDrawerSection){
-    MMDrawerSectionViewSelection,
-    MMDrawerSectionDrawerWidth,
-    MMDrawerSectionShadowToggle,
-    MMDrawerSectionOpenDrawerGestures,
-    MMDrawerSectionCloseDrawerGestures,
-    MMDrawerSectionCenterHiddenInteraction,
-    MMDrawerSectionStretchDrawer,
+    MMDrawerSectionViewContent,
+    MMDrawerSectionAccount,
 };
 
 @interface MMSideDrawerViewController : MMExampleViewController <UITableViewDataSource,UITableViewDelegate>
