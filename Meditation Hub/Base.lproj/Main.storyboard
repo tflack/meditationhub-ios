@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faz-VJ-AbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271.19999999999999" y="-1177.0614692653674"/>
+            <point key="canvasLocation" x="-258" y="-1291"/>
         </scene>
         <!--Email Login View Controller-->
         <scene sceneID="Lig-0l-CQb">
@@ -205,23 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="if5-MN-IFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-326" y="-114"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lCs-Cz-8Av">
-            <objects>
-                <navigationController storyboardIdentifier="MMNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Os1-rc-xpf" customClass="MMNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tS6-iI-U0h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="FSx-Oe-8Gj" kind="relationship" relationship="rootViewController" id="wth-yf-Fng"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KLn-W5-ZDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="734" y="-115"/>
+            <point key="canvasLocation" x="1590" y="-1258"/>
         </scene>
         <!--Logout View Controller-->
         <scene sceneID="mnr-dy-Yp6">
@@ -268,7 +252,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulY-UE-eZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66.400000000000006" y="573.46326836581716"/>
+            <point key="canvasLocation" x="521" y="1153"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="PPq-CT-mYM">
+            <objects>
+                <viewController storyboardIdentifier="settingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sd4-KU-gYX" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T4G-eH-3So"/>
+                        <viewControllerLayoutGuide type="bottom" id="5im-XA-xgK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RIF-Ap-SEd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFH-Qs-rNH">
+                                <rect key="frame" x="100" y="45" width="175" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1Sy-Dx-lh9"/>
+                                    <constraint firstAttribute="width" constant="175" id="BNG-7C-pCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dFH-Qs-rNH" firstAttribute="top" secondItem="T4G-eH-3So" secondAttribute="bottom" constant="25" id="XWD-Nz-MRz"/>
+                            <constraint firstItem="dFH-Qs-rNH" firstAttribute="centerX" secondItem="RIF-Ap-SEd" secondAttribute="centerX" id="fnd-GL-BLv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCc-2e-q7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="1155"/>
         </scene>
         <!--Subscriptions View Controller-->
         <scene sceneID="GVT-cS-buN">
@@ -302,7 +320,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTp-ea-HIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589.5999999999999" y="531.18440779610194"/>
+            <point key="canvasLocation" x="1142" y="-162"/>
+        </scene>
+        <!--Browse Packages View Controller-->
+        <scene sceneID="apb-Qt-o1k">
+            <objects>
+                <viewController storyboardIdentifier="browsePackagesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VDA-vA-m3x" customClass="BrowsePackagesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SlA-1i-zTU"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJC-rq-wXO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IeC-Oe-NuN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse Packages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75N-KF-5bN">
+                                <rect key="frame" x="100" y="43" width="175" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="2Rb-5s-vZY"/>
+                                    <constraint firstAttribute="height" constant="21" id="jwd-kM-Rib"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="75N-KF-5bN" firstAttribute="centerX" secondItem="IeC-Oe-NuN" secondAttribute="centerX" id="7Zw-B2-iMw"/>
+                            <constraint firstItem="75N-KF-5bN" firstAttribute="top" secondItem="SlA-1i-zTU" secondAttribute="bottom" constant="23" id="fyi-cY-ERw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okB-Bo-aoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="488"/>
+        </scene>
+        <!--Browse Publishers View Controller-->
+        <scene sceneID="cPT-dz-fcG">
+            <objects>
+                <viewController storyboardIdentifier="browsePublishersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pUg-Qu-X76" customClass="BrowsePublishersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S7l-Nb-gGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dns-Om-PvY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4yF-Mf-3nC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse Publishers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-Qd-Ykh">
+                                <rect key="frame" x="100" y="45" width="175" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="KCf-Vk-zNN"/>
+                                    <constraint firstAttribute="height" constant="21" id="cYG-UP-7wS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dNd-Qd-Ykh" firstAttribute="top" secondItem="S7l-Nb-gGK" secondAttribute="bottom" constant="25" id="30A-ew-bgo"/>
+                            <constraint firstItem="dNd-Qd-Ykh" firstAttribute="centerX" secondItem="4yF-Mf-3nC" secondAttribute="centerX" id="W3E-Al-2Zc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpr-j3-PN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="488"/>
         </scene>
         <!--Package List View Controller-->
         <scene sceneID="fAs-Ed-qJa">
@@ -337,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSB-R1-Ztf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-115"/>
+            <point key="canvasLocation" x="514" y="-162"/>
         </scene>
         <!--Email Signup View Controller-->
         <scene sceneID="t0R-LY-NI3">

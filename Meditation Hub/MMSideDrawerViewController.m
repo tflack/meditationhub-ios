@@ -89,14 +89,16 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
     switch (section) {
-        case MMDrawerSectionViewContent:
+        case MMDrawerSectionMyMeditations:
+            return 2;
+        case MMDrawerSectionBrowse:
             return 2;
         case MMDrawerSectionAccount:
             return 2;
@@ -117,7 +119,7 @@
     }
     
     switch (indexPath.section) {
-        case MMDrawerSectionViewContent:
+        case MMDrawerSectionMyMeditations:
             switch (indexPath.row) {
                 case 0:
                     [cell.textLabel setText:@"Packages"];
@@ -130,6 +132,20 @@
             }
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
+        case MMDrawerSectionBrowse:{
+            switch (indexPath.row) {
+                case 0:
+                    [cell.textLabel setText:@"Packages"];
+                    break;
+                case 1:
+                    [cell.textLabel setText:@"Publishers"];
+                    break;
+                default:
+                    break;
+            }
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+            break;
+        }
         case MMDrawerSectionAccount:{
             switch (indexPath.row) {
                 case 0:
@@ -153,8 +169,10 @@
 
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     switch (section) {
-        case MMDrawerSectionViewContent:
-            return @"Content";
+        case MMDrawerSectionMyMeditations:
+            return @"My Meditations";
+        case MMDrawerSectionBrowse:
+            return @"Discover";
         case MMDrawerSectionAccount:
             return @"Account";
         default:
@@ -188,7 +206,7 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     switch (indexPath.section) {
-        case MMDrawerSectionViewContent:{
+        case MMDrawerSectionMyMeditations:{
             NSString *controllerIdentifier;
             switch (indexPath.row) {
                 case 0:
@@ -220,7 +238,38 @@
             
             break;
         }
+        case MMDrawerSectionBrowse:{
+            NSString *controllerIdentifier;
+            switch (indexPath.row) {
+                case 0:
+                    NSLog(@"SELECTED PACKAGES");
+                    controllerIdentifier = @"browsePackagesViewController";
+                    break;
+                case 1:
+                    NSLog(@"SELECTED SUBSCRIPTIONS");
+                    controllerIdentifier = @"browsePublishersViewController";
+                    break;
+                default:
+                    break;
+            }
             
+            UIViewController * center = [storyboard instantiateViewControllerWithIdentifier:controllerIdentifier];
+            UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
+            
+            [self.mm_drawerController
+             setCenterViewController:nav
+             withCloseAnimation:YES
+             completion:nil];
+            
+            
+            //DIFFFERENT ANIMATION
+            //                [self.mm_drawerController
+            //                 setCenterViewController:nav
+            //                 withFullCloseAnimation:YES
+            //                 completion:nil];
+            
+            break;
+        }
         case MMDrawerSectionAccount:{
             NSString *controllerIdentifier;
             switch (indexPath.row) {

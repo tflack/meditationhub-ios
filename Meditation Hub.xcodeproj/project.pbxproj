@@ -42,6 +42,9 @@
 		ABC36A421F6676E400AECFD1 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A411F6676E400AECFD1 /* LogoutViewController.m */; };
 		ABC36A451F66845900AECFD1 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A441F66845900AECFD1 /* SubscriptionsViewController.m */; };
 		ABC36A481F66855000AECFD1 /* CenterContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A471F66855000AECFD1 /* CenterContentBaseViewController.m */; };
+		ABC36A4B1F668FFD00AECFD1 /* BrowsePackagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A4A1F668FFD00AECFD1 /* BrowsePackagesViewController.m */; };
+		ABC36A4E1F66901200AECFD1 /* BrowsePublishersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A4D1F66901200AECFD1 /* BrowsePublishersViewController.m */; };
+		ABC36A511F66947800AECFD1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A501F66947800AECFD1 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -131,6 +134,12 @@
 		ABC36A441F66845900AECFD1 /* SubscriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubscriptionsViewController.m; path = viewcontrollers/SubscriptionsViewController.m; sourceTree = "<group>"; };
 		ABC36A461F66855000AECFD1 /* CenterContentBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CenterContentBaseViewController.h; path = viewcontrollers/drawer/CenterContentBaseViewController.h; sourceTree = "<group>"; };
 		ABC36A471F66855000AECFD1 /* CenterContentBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CenterContentBaseViewController.m; path = viewcontrollers/drawer/CenterContentBaseViewController.m; sourceTree = "<group>"; };
+		ABC36A491F668FFD00AECFD1 /* BrowsePackagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowsePackagesViewController.h; path = viewcontrollers/BrowsePackagesViewController.h; sourceTree = "<group>"; };
+		ABC36A4A1F668FFD00AECFD1 /* BrowsePackagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowsePackagesViewController.m; path = viewcontrollers/BrowsePackagesViewController.m; sourceTree = "<group>"; };
+		ABC36A4C1F66901200AECFD1 /* BrowsePublishersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrowsePublishersViewController.h; path = viewcontrollers/BrowsePublishersViewController.h; sourceTree = "<group>"; };
+		ABC36A4D1F66901200AECFD1 /* BrowsePublishersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowsePublishersViewController.m; path = viewcontrollers/BrowsePublishersViewController.m; sourceTree = "<group>"; };
+		ABC36A4F1F66947800AECFD1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		ABC36A501F66947800AECFD1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +237,12 @@
 				ABC36A411F6676E400AECFD1 /* LogoutViewController.m */,
 				ABC36A431F66845900AECFD1 /* SubscriptionsViewController.h */,
 				ABC36A441F66845900AECFD1 /* SubscriptionsViewController.m */,
+				ABC36A491F668FFD00AECFD1 /* BrowsePackagesViewController.h */,
+				ABC36A4A1F668FFD00AECFD1 /* BrowsePackagesViewController.m */,
+				ABC36A4C1F66901200AECFD1 /* BrowsePublishersViewController.h */,
+				ABC36A4D1F66901200AECFD1 /* BrowsePublishersViewController.m */,
+				ABC36A4F1F66947800AECFD1 /* SettingsViewController.h */,
+				ABC36A501F66947800AECFD1 /* SettingsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -461,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC36A3F1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m in Sources */,
+				ABC36A4E1F66901200AECFD1 /* BrowsePublishersViewController.m in Sources */,
 				AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */,
 				ABC36A251F65373800AECFD1 /* MMNavigationController.m in Sources */,
 				ABC36A151F6519D300AECFD1 /* CurrentUserResponseModel.m in Sources */,
@@ -468,7 +484,9 @@
 				ABC36A451F66845900AECFD1 /* SubscriptionsViewController.m in Sources */,
 				ABA403DA1EFE17F400B1B0F0 /* SecondViewController.m in Sources */,
 				ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */,
+				ABC36A511F66947800AECFD1 /* SettingsViewController.m in Sources */,
 				ABC36A481F66855000AECFD1 /* CenterContentBaseViewController.m in Sources */,
+				ABC36A4B1F668FFD00AECFD1 /* BrowsePackagesViewController.m in Sources */,
 				ABC36A361F653D8000AECFD1 /* MMSideDrawerTableViewCell.m in Sources */,
 				ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,

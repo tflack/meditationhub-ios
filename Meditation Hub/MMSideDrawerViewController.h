@@ -24,7 +24,8 @@
 #import "MMViewController.h"
 
 typedef NS_ENUM(NSInteger, MMDrawerSection){
-    MMDrawerSectionViewContent,
+    MMDrawerSectionMyMeditations,
+    MMDrawerSectionBrowse,
     MMDrawerSectionAccount,
 };
 
