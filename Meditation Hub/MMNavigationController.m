@@ -26,13 +26,13 @@
 
 @implementation MMNavigationController
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    if(self.mm_drawerController.showsStatusBarBackgroundView){
-        return UIStatusBarStyleLightContent;
-    }
-    else {
-        return UIStatusBarStyleDefault;
-    }
-}
+//-(UIStatusBarStyle)preferredStatusBarStyle{
+//    if(self.mm_drawerController.showsStatusBarBackgroundView){
+//        return UIStatusBarStyleLightContent;
+//    }
+//    else {
+//        return UIStatusBarStyleDefault;
+//    }
+//}
 
 @end

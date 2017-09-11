@@ -14,6 +14,7 @@
 #import "CurrentUserRequestModel.h"
 #import "CurrentUserResponseModel.h"
 #import "MMDrawerController.h"
+#import "Global.h"
 
 @interface AppDelegate ()
 
@@ -27,12 +28,10 @@
 
     
     
-    //Colors
-    UIColor *navBarTintandTextColor = [UIColor colorWithRed:0.075 green:0.608 blue:0.918 alpha:1.000];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:navBarTintandTextColor, NSForegroundColorAttributeName, [UIFont fontWithName:@"FontName" size:16.0], NSFontAttributeName, nil]];
-    [[UINavigationBar appearance] setTintColor:navBarTintandTextColor];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    //Navigation Controller Colors
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"FontName" size:16.0], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:COLOR_PRIMARY];
     
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     

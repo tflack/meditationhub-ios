@@ -61,7 +61,6 @@
                              rightDrawerViewController:nil];
     [self.drawerController setShowsShadow:NO];
     [self.drawerController setRestorationIdentifier:@"MMDrawer"];
-    [self.drawerController setMaximumRightDrawerWidth:200.0];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
@@ -76,22 +75,13 @@
 //     }];
     //self.view.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
-                                          green:173.0/255.0
-                                           blue:234.0/255.0
-                                          alpha:1.0];
-    [self.view.window setTintColor:tintColor];
+//    UIColor * tintColor = [UIColor colorWithRed:124.0/255.0
+//                                          green:53.0/255.0
+//                                           blue:139.0/255.0
+//                                          alpha:1.0];
+//    [self.view.window setTintColor:tintColor];
     self.view.window.rootViewController = self.drawerController;
     [[UIApplication sharedApplication].keyWindow setRootViewController:self.drawerController];
-    
-    
-    
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-//    UIViewController *vc;
-//    vc = [storyboard instantiateViewControllerWithIdentifier:@"packageListViewController"];
-//    self.view.window.rootViewController = vc;
-//    [[UIApplication sharedApplication].keyWindow setRootViewController:vc];
-    //[self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)tappedNextButton:(id)sender {
