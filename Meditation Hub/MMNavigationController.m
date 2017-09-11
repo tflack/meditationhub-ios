@@ -26,6 +26,26 @@
 
 @implementation MMNavigationController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    //[self setTitle:@"Left Drawer"];
+//    UIImage *img = [UIImage imageNamed:@"floweronlylogo"];
+//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+//    [imgView setImage:img];
+//    // setContent mode aspect fit
+//    [imgView setContentMode:UIViewContentModeScaleAspectFit];
+//    [self.navigationBar addSubview:imgView];
+//
+//    
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainlogo"]];
+//    CGSize imageSize = CGSizeMake(40, 40);
+//    CGFloat marginX = (self.navigationController.navigationBar.frame.size.width / 2) - (imageSize.width / 2);
+//    
+//    imageView.frame = CGRectMake(marginX, 0, imageSize.width, imageSize.height);
+//    [self.navigationBar addSubview:imageView];
+}
+
+
 //-(UIStatusBarStyle)preferredStatusBarStyle{
 //    if(self.mm_drawerController.showsStatusBarBackgroundView){
 //        return UIStatusBarStyleLightContent;
