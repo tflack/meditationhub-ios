@@ -261,6 +261,40 @@
             </objects>
             <point key="canvasLocation" x="66.400000000000006" y="573.46326836581716"/>
         </scene>
+        <!--Subscriptions View Controller-->
+        <scene sceneID="GVT-cS-buN">
+            <objects>
+                <viewController storyboardIdentifier="subscriptionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hrT-nL-RO5" customClass="SubscriptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fZp-DZ-0md"/>
+                        <viewControllerLayoutGuide type="bottom" id="WB4-aR-ZXe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gef-ra-5jh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscriptions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhr-ic-9tZ">
+                                <rect key="frame" x="100" y="44" width="175" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="30x-BR-ucs"/>
+                                    <constraint firstAttribute="height" constant="21" id="j19-zB-3tv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.20784313730000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jhr-ic-9tZ" firstAttribute="top" secondItem="fZp-DZ-0md" secondAttribute="bottom" constant="24" id="blB-8w-BUI"/>
+                            <constraint firstItem="Jhr-ic-9tZ" firstAttribute="centerX" secondItem="Gef-ra-5jh" secondAttribute="centerX" id="j95-ni-CqU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTp-ea-HIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.5999999999999" y="531.18440779610194"/>
+        </scene>
         <!--Package List View Controller-->
         <scene sceneID="fAs-Ed-qJa">
             <objects>

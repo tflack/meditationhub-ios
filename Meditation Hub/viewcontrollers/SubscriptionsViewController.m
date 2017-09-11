@@ -1,21 +1,18 @@
 //
-//  PackageListViewController.m
+//  SubscriptionsViewController.m
 //  Meditation Hub
 //
-//  Created by Tim Flack on 9/4/17.
+//  Created by Tim Flack on 9/11/17.
 //  Copyright © 2017 Homma. All rights reserved.
 //
 
-#import "PackageListViewController.h"
+#import "SubscriptionsViewController.h"
 
-
-#import <QuartzCore/QuartzCore.h>
-
-@interface PackageListViewController ()
+@interface SubscriptionsViewController ()
 
 @end
 
-@implementation PackageListViewController
+@implementation SubscriptionsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

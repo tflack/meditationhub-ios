@@ -40,6 +40,8 @@
 		ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A3B1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m */; };
 		ABC36A3F1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */; };
 		ABC36A421F6676E400AECFD1 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A411F6676E400AECFD1 /* LogoutViewController.m */; };
+		ABC36A451F66845900AECFD1 /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A441F66845900AECFD1 /* SubscriptionsViewController.m */; };
+		ABC36A481F66855000AECFD1 /* CenterContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A471F66855000AECFD1 /* CenterContentBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,6 +127,10 @@
 		ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLeftSideDrawerViewController.m; sourceTree = "<group>"; };
 		ABC36A401F6676E400AECFD1 /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoutViewController.h; path = viewcontrollers/LogoutViewController.h; sourceTree = "<group>"; };
 		ABC36A411F6676E400AECFD1 /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoutViewController.m; path = viewcontrollers/LogoutViewController.m; sourceTree = "<group>"; };
+		ABC36A431F66845900AECFD1 /* SubscriptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubscriptionsViewController.h; path = viewcontrollers/SubscriptionsViewController.h; sourceTree = "<group>"; };
+		ABC36A441F66845900AECFD1 /* SubscriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubscriptionsViewController.m; path = viewcontrollers/SubscriptionsViewController.m; sourceTree = "<group>"; };
+		ABC36A461F66855000AECFD1 /* CenterContentBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CenterContentBaseViewController.h; path = viewcontrollers/drawer/CenterContentBaseViewController.h; sourceTree = "<group>"; };
+		ABC36A471F66855000AECFD1 /* CenterContentBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CenterContentBaseViewController.m; path = viewcontrollers/drawer/CenterContentBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,8 @@
 				ABC36A0D1F5D331800AECFD1 /* PackageListViewController.m */,
 				ABC36A401F6676E400AECFD1 /* LogoutViewController.h */,
 				ABC36A411F6676E400AECFD1 /* LogoutViewController.m */,
+				ABC36A431F66845900AECFD1 /* SubscriptionsViewController.h */,
+				ABC36A441F66845900AECFD1 /* SubscriptionsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -300,6 +308,8 @@
 				ABC36A271F653A1800AECFD1 /* UIViewController+MMDrawerController.m */,
 				ABC36A3D1F653E0500AECFD1 /* MMLeftSideDrawerViewController.h */,
 				ABC36A3E1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m */,
+				ABC36A461F66855000AECFD1 /* CenterContentBaseViewController.h */,
+				ABC36A471F66855000AECFD1 /* CenterContentBaseViewController.m */,
 			);
 			name = Drawer;
 			sourceTree = "<group>";
@@ -455,8 +465,10 @@
 				ABC36A251F65373800AECFD1 /* MMNavigationController.m in Sources */,
 				ABC36A151F6519D300AECFD1 /* CurrentUserResponseModel.m in Sources */,
 				AB2FB1581F341BA600AFCEAC /* ApiManager.m in Sources */,
+				ABC36A451F66845900AECFD1 /* SubscriptionsViewController.m in Sources */,
 				ABA403DA1EFE17F400B1B0F0 /* SecondViewController.m in Sources */,
 				ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */,
+				ABC36A481F66855000AECFD1 /* CenterContentBaseViewController.m in Sources */,
 				ABC36A361F653D8000AECFD1 /* MMSideDrawerTableViewCell.m in Sources */,
 				ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,
