@@ -45,6 +45,7 @@
 		ABC36A4B1F668FFD00AECFD1 /* BrowsePackagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A4A1F668FFD00AECFD1 /* BrowsePackagesViewController.m */; };
 		ABC36A4E1F66901200AECFD1 /* BrowsePublishersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A4D1F66901200AECFD1 /* BrowsePublishersViewController.m */; };
 		ABC36A511F66947800AECFD1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A501F66947800AECFD1 /* SettingsViewController.m */; };
+		ABC36A541F6714B800AECFD1 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC36A531F6714B800AECFD1 /* FavoritesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +141,8 @@
 		ABC36A4D1F66901200AECFD1 /* BrowsePublishersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrowsePublishersViewController.m; path = viewcontrollers/BrowsePublishersViewController.m; sourceTree = "<group>"; };
 		ABC36A4F1F66947800AECFD1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		ABC36A501F66947800AECFD1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		ABC36A521F6714B800AECFD1 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesViewController.h; path = viewcontrollers/FavoritesViewController.h; sourceTree = "<group>"; };
+		ABC36A531F6714B800AECFD1 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesViewController.m; path = viewcontrollers/FavoritesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 				ABC36A4D1F66901200AECFD1 /* BrowsePublishersViewController.m */,
 				ABC36A4F1F66947800AECFD1 /* SettingsViewController.h */,
 				ABC36A501F66947800AECFD1 /* SettingsViewController.m */,
+				ABC36A521F6714B800AECFD1 /* FavoritesViewController.h */,
+				ABC36A531F6714B800AECFD1 /* FavoritesViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				AB2FB14D1F33EF3100AFCEAC /* SessionManager.m in Sources */,
 				AB2FB1521F33F1D500AFCEAC /* UserModel.m in Sources */,
 				AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */,
+				ABC36A541F6714B800AECFD1 /* FavoritesViewController.m in Sources */,
 				AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */,
 				ABC36A321F653D1400AECFD1 /* MMLogoView.m in Sources */,
 				AB2FB1911F35236900AFCEAC /* UserRealm.m in Sources */,

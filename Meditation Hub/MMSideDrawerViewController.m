@@ -97,7 +97,7 @@
     // Return the number of rows in the section.
     switch (section) {
         case MMDrawerSectionMyMeditations:
-            return 2;
+            return 3;
         case MMDrawerSectionBrowse:
             return 2;
         case MMDrawerSectionAccount:
@@ -126,6 +126,9 @@
                     break;
                 case 1:
                     [cell.textLabel setText:@"Subscriptions"];
+                    break;
+                case 2:
+                    [cell.textLabel setText:@"Favorites"];
                     break;
                 default:
                     break;
@@ -216,6 +219,10 @@
                 case 1:
                     NSLog(@"SELECTED SUBSCRIPTIONS");
                     controllerIdentifier = @"subscriptionsViewController";
+                    break;
+                case 2:
+                    NSLog(@"SELECTED FAVORITES");
+                    controllerIdentifier = @"favoritesViewController";
                     break;
                 default:
                     break;
