@@ -1,22 +1,20 @@
 //
-//  PublisherModel.m
+//  ListPublishersRequestModel.m
 //  Meditation Hub
 //
 //  Created by Tim Flack on 9/21/17.
 //  Copyright © 2017 MHUB. All rights reserved.
 //
 
-#import "PublisherModel.h"
+#import "ListPublishersRequestModel.h"
 
-@implementation PublisherModel
+@implementation ListPublishersRequestModel MTLModel <MTLJSONSerializing>
 
 #pragma mark - Mantle JSONKeyPathsByPropertyKey
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"shortDescription": @"description_short",
-             @"longDescription": @"description_long",
-             @"profilePhoto": @"profile_photo"
+             @"page": @"page",
+             @"pageSize": @"pageSize", 
              };
-}
 
 @end

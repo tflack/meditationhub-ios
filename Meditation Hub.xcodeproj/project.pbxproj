@@ -21,6 +21,8 @@
 		AB2FB1941F352CDD00AFCEAC /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FB1931F352CDD00AFCEAC /* WelcomeViewController.m */; };
 		AB435BD51F73B0A20034841F /* PublisherRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = AB435BD41F73B0A20034841F /* PublisherRealm.m */; };
 		AB435BD81F73B0D90034841F /* PublisherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB435BD71F73B0D90034841F /* PublisherModel.m */; };
+		AB435BDB1F73B4BB0034841F /* ListPublishersRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB435BDA1F73B4BB0034841F /* ListPublishersRequestModel.m */; };
+		AB435BDE1F73B5560034841F /* ListPublishersResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB435BDD1F73B5560034841F /* ListPublishersResponseModel.m */; };
 		AB8322BE1F33DAE90018EF14 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8322BD1F33DAE90018EF14 /* LoginViewController.m */; };
 		ABA403D11EFE17F400B1B0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D01EFE17F400B1B0F0 /* main.m */; };
 		ABA403D41EFE17F400B1B0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA403D31EFE17F400B1B0F0 /* AppDelegate.m */; };
@@ -96,6 +98,10 @@
 		AB435BD41F73B0A20034841F /* PublisherRealm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PublisherRealm.m; path = models/realm/PublisherRealm.m; sourceTree = "<group>"; };
 		AB435BD61F73B0D90034841F /* PublisherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PublisherModel.h; path = models/mantle/PublisherModel.h; sourceTree = "<group>"; };
 		AB435BD71F73B0D90034841F /* PublisherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PublisherModel.m; path = models/mantle/PublisherModel.m; sourceTree = "<group>"; };
+		AB435BD91F73B4BB0034841F /* ListPublishersRequestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ListPublishersRequestModel.h; path = models/mantle/request/ListPublishersRequestModel.h; sourceTree = "<group>"; };
+		AB435BDA1F73B4BB0034841F /* ListPublishersRequestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ListPublishersRequestModel.m; path = models/mantle/request/ListPublishersRequestModel.m; sourceTree = "<group>"; };
+		AB435BDC1F73B5560034841F /* ListPublishersResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ListPublishersResponseModel.h; path = models/mantle/response/ListPublishersResponseModel.h; sourceTree = "<group>"; };
+		AB435BDD1F73B5560034841F /* ListPublishersResponseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ListPublishersResponseModel.m; path = models/mantle/response/ListPublishersResponseModel.m; sourceTree = "<group>"; };
 		AB8322BC1F33DAE90018EF14 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		AB8322BD1F33DAE90018EF14 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		ABA403CC1EFE17F400B1B0F0 /* Meditation Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meditation Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +210,8 @@
 				AB2FB1641F346ADB00AFCEAC /* FacebookLoginRequestModel.m */,
 				ABC36A161F651B4300AECFD1 /* CurrentUserRequestModel.h */,
 				ABC36A171F651B4300AECFD1 /* CurrentUserRequestModel.m */,
+				AB435BD91F73B4BB0034841F /* ListPublishersRequestModel.h */,
+				AB435BDA1F73B4BB0034841F /* ListPublishersRequestModel.m */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -217,6 +225,8 @@
 				AB2FB1611F346A2A00AFCEAC /* FacebookLoginResponseModel.m */,
 				ABC36A131F6519D300AECFD1 /* CurrentUserResponseModel.h */,
 				ABC36A141F6519D300AECFD1 /* CurrentUserResponseModel.m */,
+				AB435BDC1F73B5560034841F /* ListPublishersResponseModel.h */,
+				AB435BDD1F73B5560034841F /* ListPublishersResponseModel.m */,
 			);
 			name = Response;
 			sourceTree = "<group>";
@@ -491,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC36A3F1F653E0500AECFD1 /* MMLeftSideDrawerViewController.m in Sources */,
+				AB435BDE1F73B5560034841F /* ListPublishersResponseModel.m in Sources */,
 				ABC36A4E1F66901200AECFD1 /* BrowsePublishersViewController.m in Sources */,
 				AB2FB15B1F34203600AFCEAC /* EmailLoginViewController.m in Sources */,
 				ABC36A251F65373800AECFD1 /* MMNavigationController.m in Sources */,
@@ -504,6 +515,7 @@
 				ABC36A511F66947800AECFD1 /* SettingsViewController.m in Sources */,
 				ABC36A481F66855000AECFD1 /* CenterContentBaseViewController.m in Sources */,
 				ABC36A4B1F668FFD00AECFD1 /* BrowsePackagesViewController.m in Sources */,
+				AB435BDB1F73B4BB0034841F /* ListPublishersRequestModel.m in Sources */,
 				ABC36A361F653D8000AECFD1 /* MMSideDrawerTableViewCell.m in Sources */,
 				ABC36A3C1F653DAE00AECFD1 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				AB2FB1551F33F8DA00AFCEAC /* UserEmailLoginResponseModel.m in Sources */,

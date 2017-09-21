@@ -3,7 +3,7 @@
 //  Meditation Hub
 //
 //  Created by Tim Flack on 8/3/17.
-//  Copyright © 2017 Homma. All rights reserved.
+//  Copyright © 2017 MHUB. All rights reserved.
 //
 
 #import "UserEmailLoginResponseModel.h"
