@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIView *processingActivityView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activitySpinner;
 @property (weak, nonatomic) IBOutlet UILabel *waitingMessage;
+@property (strong, nonatomic) UIViewController *loginLoadingViewController;
 
 
 - (IBAction)facebookLoginButtonTapped:(id)sender;

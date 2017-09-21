@@ -10,4 +10,10 @@
 
 @interface EmailSignupViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *txtFirstName;
+@property (weak, nonatomic) IBOutlet UITextField *txtLastName;
+@property (weak, nonatomic) IBOutlet UITextField *txtEmail;
+@property (weak, nonatomic) IBOutlet UIButton *btnSignup;
+- (IBAction)tappedSignup:(id)sender;
+
 @end

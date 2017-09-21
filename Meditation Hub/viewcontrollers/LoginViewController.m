@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    _loginLoadingViewController = [storyboard instantiateViewControllerWithIdentifier:@"loginLoadingViewController"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,28 +47,27 @@
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login logInWithReadPermissions:permissionsArray fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
         if (error) {
-            [self performSelectorOnMainThread:@selector(hideWaitOverlay) withObject:nil waitUntilDone:YES];
-            [login logOut];
-            [self showLoginAlert:[error localizedDescription]];
+            [self hideWaitOverlay:^(BOOL finished) {
+                [self showLoginAlert:[error localizedDescription]];
+            }];
         } else if (result.isCancelled) {
-            [self performSelectorOnMainThread:@selector(hideWaitOverlay) withObject:nil waitUntilDone:YES];
-            //DDLogVerbose(@"The user cancelled the Facebook login.");
-            [self showLoginAlert:@"Please accept the Facebook permission."];
+            [self hideWaitOverlay:^(BOOL finished) {
+                [self showLoginAlert:@"Please accept the Facebook permission."];
+            }];
         } else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
             if ([result.grantedPermissions containsObject:@"email"]) {
                 [self facebookLoginAccepted];
             }else{
-                //DDLogVerbose(@"User did not grant all permissions");
-                [self showLoginAlert:[error localizedDescription]];
+                [self hideWaitOverlay:^(BOOL finished) {
+                    [self showLoginAlert:@"Something went wrong with Facebook login"];
+                }];
             }
         }
     }];
 }
 
 -(void)facebookLoginAccepted{
-    [self showWaitOverlay:@"Please Wait..." withCompletionBlock:^(BOOL finished) {
+    [self showWaitOverlay:^(BOOL finished) {
         NSString *token = [[FBSDKAccessToken currentAccessToken] tokenString];
         //Send the token to our server to create the account or auth the user
         FacebookLoginRequestModel *requestModel = [FacebookLoginRequestModel new];
@@ -94,7 +95,7 @@
                     }];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [self signinFinished];
+                        [self performSelector:@selector(signinFinished) withObject:nil afterDelay:2.0];
                     });
                 }
             });
@@ -121,108 +122,25 @@
 }
 
 -(void)signinFinished {
-    UIStoryboard *storyboard = self.storyboard;
-    UIViewController *contentViewController;
-    BOOL hasMenu = YES;
-//    if([loginData objectForKey:@"vehicles"] != nil){
-//        NSDictionary *vehicleData = [loginData objectForKey:@"vehicles"];
-//        if (vehicleData == (id)[NSNull null] || [vehicleData count]==0){
-//            contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"signupNoVehiclesViewController"];
-//            hasMenu = NO;
-//        }else{
-//            for (NSDictionary* vehicleDict in vehicleData) {
-//                if([vehicleDict objectForKey:@"beacons"] != nil){
-//                    if([[vehicleDict objectForKey:@"beacons"] count] > 0){
-//                        foundBeacons = YES;
-//                        break;
-//                    }
-//                }
-//            }
-//            
-//            if(![CLLocationManager locationServicesEnabled]){
-//                contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"locationServicesViewController"];
-//                hasMenu = NO;
-//            }else if ([CLLocationManager locationServicesEnabled] &&
-//                      [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied){
-//                contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"locationServicesViewController"];
-//                hasMenu = NO;
-//            }else if ([CLLocationManager locationServicesEnabled] &&
-//                      [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
-//                contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"locationServicesViewController"];
-//                hasMenu = NO;
-//            }else{
-//                if(foundBeacons){
-//                    contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"beaconTrackerView"];
-//                }else{
-//                    contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"driverAuditTrackerView"];
-//                }
-//            }
-//        }
-//    }else{
+    //[self hideWaitOverlay:^(BOOL hideComplete) {
+        UIStoryboard *storyboard = self.storyboard;
+        UIViewController *contentViewController;
         contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
-        hasMenu = NO;
-    //}
-    
-    [self performSelectorOnMainThread:@selector(hideWaitOverlay) withObject:nil waitUntilDone:YES];
-    //Only load the reveal menu controller if we need to
-//    if(hasMenu){
-//        SidebarViewController *menuViewController = (SidebarViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SidebarViewController"];
-//        if( [loginData objectForKey:@"userdata"] != nil){
-//            NSDictionary *userData = [loginData objectForKey:@"userdata"];
-//            if([userData objectForKey:@"picture"] != nil){
-//                menuViewController.avatarUrl = [userData objectForKey:@"picture"];
-//            }
-//            if( [userData objectForKey:@"date_created"] != nil){
-//                menuViewController.memberDate = [userData objectForKey:@"date_created"];
-//            }
-//            if( [userData objectForKey:@"firstname"] != nil && [userData objectForKey:@"lastname"] != nil){
-//                menuViewController.userName = [NSString stringWithFormat:@"%@ %@", [userData objectForKey:@"firstname"], [userData objectForKey:@"lastname"]];
-//            }
-//        }
-//        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
-//        SWRevealViewController *mainRevealController = [[SWRevealViewController alloc]
-//                                                        initWithRearViewController:menuViewController frontViewController:frontNavigationController];
-//        
-//        [mainRevealController setShouldUseFrontViewOverlay:YES];
-//        
-//        self.view.window.rootViewController = mainRevealController;
-//        [[UIApplication sharedApplication].keyWindow setRootViewController:mainRevealController];
-//    }else{
         [[UIApplication sharedApplication].keyWindow setRootViewController:contentViewController];
-        //[self presentViewController:contentViewController animated:YES completion:nil];
-//    }
+    //}];
 }
 
--(void)showWaitOverlay:(NSString *)message withCompletionBlock:(void(^)(BOOL))overlayComplete
+-(void)showWaitOverlay:(void(^)(BOOL))overlayComplete
 {
-    [_processingActivityView setAlpha:0.0f];
-    [_waitingMessage setText:message];
-    [_processingActivityView setHidden:NO];
-    [_activitySpinner startAnimating];
-    [UIView animateWithDuration:0.25
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         [_processingActivityView setAlpha:1.0f];
-                     }
-                     completion:^(BOOL finished){
-                         dispatch_async(dispatch_get_main_queue(), ^{
-                             overlayComplete(YES);
-                         });
-                     }];
+    [self presentViewController:_loginLoadingViewController animated:YES completion:^{
+        overlayComplete(YES);
+    }];
 }
 
--(void)hideWaitOverlay
+-(void)hideWaitOverlay:(void(^)(BOOL))hideComplete
 {
-    [UIView animateWithDuration:0.25
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         [_processingActivityView setAlpha:0.0f];
-                     }
-                     completion:^(BOOL finished){
-                         [_activitySpinner stopAnimating];
-                         [_processingActivityView setHidden:YES];
-                     }];
+    [self dismissViewControllerAnimated:YES completion:^{
+        hideComplete(YES);
+    }];
 }
 @end
