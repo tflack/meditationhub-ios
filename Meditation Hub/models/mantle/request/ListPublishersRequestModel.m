@@ -8,13 +8,13 @@
 
 #import "ListPublishersRequestModel.h"
 
-@implementation ListPublishersRequestModel MTLModel <MTLJSONSerializing>
+@implementation ListPublishersRequestModel
 
 #pragma mark - Mantle JSONKeyPathsByPropertyKey
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"page": @"page",
-             @"pageSize": @"pageSize", 
+             @"pageSize": @"pageSize"
              };
-
+}
 @end

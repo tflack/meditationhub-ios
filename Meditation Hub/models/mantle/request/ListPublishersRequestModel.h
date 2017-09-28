@@ -8,7 +8,7 @@
 
 #import <Mantle/Mantle.h>
 
-@interface ListPublishersRequestModel : MTLModel
+@interface ListPublishersRequestModel : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy) NSString *page;
 @property (nonatomic, copy) NSString *pageSize;

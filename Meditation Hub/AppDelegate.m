@@ -70,7 +70,7 @@
         if(!sessionValid){
             [self.window.rootViewController.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"vclLoading"];
+            UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
             self.window.rootViewController = vc;
             [self.window makeKeyAndVisible];
         }
