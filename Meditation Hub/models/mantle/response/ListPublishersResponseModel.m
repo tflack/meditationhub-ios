@@ -7,7 +7,21 @@
 //
 
 #import "ListPublishersResponseModel.h"
+#import "PublisherModel.h"
 
 @implementation ListPublishersResponseModel
+
+#pragma mark - Mantle JSONKeyPathsByPropertyKey
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"publishers" : @"items",
+             @"success": @"success"
+             };
+}
+
+
++ (NSValueTransformer *)publishersJSONTransformer {
+    return [MTLJSONAdapter arrayTransformerWithModelClass:PublisherModel.class];
+}
 
 @end

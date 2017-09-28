@@ -47,4 +47,12 @@
     
     return [NSError errorWithDomain:error.domain code:error.code userInfo:[userInfo copy]];;
 }
+
+-(void)setSessionToken:(NSString *)token {
+    [self.requestSerializer setValue:token forHTTPHeaderField:@"X-Auth-Token"];
+}
+
+-(void)clearSessionToken {
+    [self.requestSerializer setValue:@"" forHTTPHeaderField:@"X-Auth-Token"];
+}
 @end

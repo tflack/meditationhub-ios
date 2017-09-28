@@ -8,6 +8,7 @@
 
 #import "LogoutViewController.h"
 #import "UserRealm.h"
+#import "ApiManager.h"
 
 @interface LogoutViewController ()
 
@@ -27,6 +28,7 @@
                 [realm deleteObject:currentUser];
                 [realm commitWriteTransaction];
             }
+            [[APIManager sharedManager] clearSessionToken];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //Go to login
                 [self performSelector:@selector(controllerTransition) withObject:self afterDelay:2.0f];

@@ -89,11 +89,10 @@
                     
                     UserRealm *newUser = [[UserRealm alloc] initWithMantleModel:(UserModel *)responseModel.user];
                     newUser.sessionToken = responseModel.token;
-                    
                     [realm transactionWithBlock:^{
                         [realm addObject:newUser];
                     }];
-                    
+                                    
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self performSelector:@selector(signinFinished) withObject:nil afterDelay:2.0];
                     });
@@ -122,12 +121,12 @@
 }
 
 -(void)signinFinished {
-    //[self hideWaitOverlay:^(BOOL hideComplete) {
+    [self hideWaitOverlay:^(BOOL hideComplete) {
         UIStoryboard *storyboard = self.storyboard;
         UIViewController *contentViewController;
         contentViewController = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
         [[UIApplication sharedApplication].keyWindow setRootViewController:contentViewController];
-    //}];
+    }];
 }
 
 -(void)showWaitOverlay:(void(^)(BOOL))overlayComplete

@@ -13,6 +13,7 @@
 static NSString *const kUserEmailLoginPath = @"/auth/email";
 static NSString *const kFacebookLoginPath = @"/auth/facebook";
 static NSString *const kCurrentUserPath = @"/user/me";
+static NSString *const kListPublishersPath = @"/author";
 
 @implementation APIManager
 
@@ -22,7 +23,6 @@ static NSString *const kCurrentUserPath = @"/user/me";
     
     NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
     NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
-    [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"X-Auth-Token"];
     
     return [self POST:kUserEmailLoginPath parameters:parametersWithKey progress:nil
              success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -32,6 +32,9 @@ static NSString *const kCurrentUserPath = @"/user/me";
                  NSError *error;
                  UserEmailLoginResponseModel *loginResponse = [MTLJSONAdapter modelOfClass:UserEmailLoginResponseModel.class
                                                             fromJSONDictionary:responseDictionary error:&error];
+                 
+                 [self setSessionToken:loginResponse.token];
+                 
                  success(loginResponse);
                  
              } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -46,7 +49,6 @@ static NSString *const kCurrentUserPath = @"/user/me";
     
     NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
     NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
-    //[self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"X-Auth-Token"];
     
     return [self POST:kFacebookLoginPath parameters:parametersWithKey progress:nil
               success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -56,6 +58,9 @@ static NSString *const kCurrentUserPath = @"/user/me";
                   NSError *error;
                   FacebookLoginResponseModel *loginResponse = [MTLJSONAdapter modelOfClass:FacebookLoginResponseModel.class
                                                                          fromJSONDictionary:responseDictionary error:&error];
+                  
+                  [self setSessionToken:loginResponse.token];
+                  
                   success(loginResponse);
                   
               } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -71,8 +76,6 @@ static NSString *const kCurrentUserPath = @"/user/me";
 //    NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
 //    NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
 //    
-    UserRealm *userRealm = [[UserRealm allObjects] firstObject];
-    [self.requestSerializer setValue:[userRealm valueForKey:@"sessionToken"] forHTTPHeaderField:@"X-Auth-Token"];
     
     return [self GET:kCurrentUserPath parameters:nil progress:nil
               success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -89,5 +92,27 @@ static NSString *const kCurrentUserPath = @"/user/me";
               }];
 }
 
+
+- (NSURLSessionDataTask *)listPublishers:(ListPublishersRequestModel *)requestModel
+                                 success:(void (^)(ListPublishersResponseModel *responseModel))success
+                                 failure:(void (^)(NSError *error))failure{
+    
+    //    NSDictionary *parameters = [MTLJSONAdapter JSONDictionaryFromModel:requestModel error:nil];
+    //    NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
+    //
+    
+    return [self GET:kListPublishersPath parameters:nil progress:nil
+             success:^(NSURLSessionDataTask *task, id responseObject) {
+                 
+                 NSDictionary *responseDictionary = (NSDictionary *)responseObject;
+                 
+                 NSError *error;
+                 ListPublishersResponseModel *list = [MTLJSONAdapter modelOfClass:ListPublishersResponseModel.class
+                                                            fromJSONDictionary:responseDictionary error:&error];
+                 success(list);
+             } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                 failure([self handleError:error withSessionDataTask:task]);
+             }];
+}
 
 @end

@@ -5,6 +5,8 @@
 #import "FacebookLoginResponseModel.h"
 #import "CurrentUserResponseModel.h"
 #import "CurrentUserRequestModel.h"
+#import "ListPublishersRequestModel.h"
+#import "ListPublishersResponseModel.h"
 
 @interface APIManager : SessionManager
 
@@ -15,6 +17,9 @@
 
 
 - (NSURLSessionDataTask *)getCurrentUser:(CurrentUserRequestModel *)requestModel success:(void (^)(CurrentUserResponseModel *responseModel))success failure:(void (^)(NSError *error))failure;
+
+- (NSURLSessionDataTask *)listPublishers:(ListPublishersRequestModel *)requestModel success:(void (^)(ListPublishersResponseModel *responseModel))success failure:(void (^)(NSError *error))failure;
+
 
 
 @end

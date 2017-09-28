@@ -18,5 +18,5 @@
 @property NSString *sessionToken;
 
 - (id)initWithMantleModel:(UserModel *)userModel;
-
+-(void)persistSessionToken:(NSString*)token;
 @end

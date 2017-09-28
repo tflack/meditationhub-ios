@@ -10,4 +10,7 @@
 
 @interface ListPublishersResponseModel : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, assign) BOOL success;
+@property (nonatomic, copy) NSArray *publishers;
+
 @end

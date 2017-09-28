@@ -6,16 +6,16 @@ target 'Meditation Hub' do
   # use_frameworks!
 
   # Pods for Meditation Hub
-  pod 'AFNetworking', '~> 3.0'
+  pod 'AFNetworking', '~> 3.1'
   pod 'Reachability'
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'SBJson'
   pod 'Realm'
   
-  pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit'
-  pod 'FBSDKShareKit'
+  pod 'FBSDKCoreKit', '4.24.0'
+  pod 'FBSDKLoginKit', '4.24.0'
+  pod 'FBSDKShareKit', '4.24.0'
   
   pod 'Mantle',  '2.1.0'
   pod 'MMDrawerController', '0.6.0'

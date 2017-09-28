@@ -13,5 +13,7 @@
 
 + (id)sharedManager;
 -(NSError *)handleError:(NSError *)error withSessionDataTask:(NSURLSessionDataTask *)dataTask;
+-(void)setSessionToken:(NSString *)token;
+-(void)clearSessionToken;
 
 @end

@@ -102,6 +102,8 @@
         //getCurrentUser attempts to get the current user and includes the auth token in it's header so we don't need to do anything with the
         //UserRealm value here
         CurrentUserRequestModel *requestModel = [CurrentUserRequestModel new];
+        UserRealm *userRealm = [[UserRealm allObjects] firstObject];
+        [[APIManager sharedManager] setSessionToken:[userRealm valueForKey:@"sessionToken"]];
         [[APIManager sharedManager] getCurrentUser:requestModel success:^(CurrentUserResponseModel *responseModel){
             dispatch_async(dispatch_get_main_queue(), ^{
                 if(responseModel.success){
